@@ -15,7 +15,9 @@ served from a base path and Astro does not rewrite hardcoded hrefs — a bare
 
 ## Writing a post
 
-Create `src/content/blog/YYYY-MM-DD-<slug>.mdx`:
+Create `src/content/blog/<slug>.md` — no date in the filename; the filename
+becomes the URL (`/public-build/posts/<slug>/`) and the displayed date comes
+from the `date:` field:
 
 ```yaml
 ---

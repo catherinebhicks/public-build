@@ -9,7 +9,7 @@ tags: [rubric, evaluation, spec]
 draft: true
 ---
 
-Deciding that [the rubric comes first](/public-build/posts/2026-09-20-the-rubric-comes-first/)
+Deciding that [the rubric comes first](/public-build/posts/the-rubric-comes-first/)
 raises an immediate second question: who grades the grader?
 
 The rubric judges the candidate's answer. But the agent's *feedback* is also
