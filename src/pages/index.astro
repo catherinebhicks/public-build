@@ -1,0 +1,18 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PostList from '../components/PostList.astro';
+import { getPosts, getProjects } from '../lib/content';
+import { SITE_DESCRIPTION } from '../consts';
+
+const posts = await getPosts();
+const projects = await getProjects();
+const projectNames = Object.fromEntries(projects.map((p) => [p.id, p.data.name]));
+---
+<BaseLayout>
+  <h1>Public Build</h1>
+  <p class="lede">{SITE_DESCRIPTION}</p>
+
+  {posts.length === 0
+    ? <p>No posts yet.</p>
+    : <PostList posts={posts} showProject projectNames={projectNames} />}
+</BaseLayout>

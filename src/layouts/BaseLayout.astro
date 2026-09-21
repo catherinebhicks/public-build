@@ -1,0 +1,90 @@
+---
+import { SITE_TITLE, SITE_DESCRIPTION, AUTHOR, AUTHOR_URL } from '../consts';
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+  /** Set for article pages so OpenGraph reports the right type. */
+  type?: 'website' | 'article';
+}
+
+const { title, description = SITE_DESCRIPTION, type = 'website' } = Astro.props;
+
+const pageTitle = title ? `${title} — ${SITE_TITLE}` : SITE_TITLE;
+const canonical = new URL(Astro.url.pathname, Astro.site).href;
+const path = Astro.url.pathname;
+
+const nav = [
+  { href: '/', label: 'Posts' },
+  { href: '/projects/', label: 'Projects' },
+  { href: '/about/', label: 'About' },
+];
+
+// Person schema with sameAs pointing home. This is the mitigation for
+// publishing on a subdomain: it tells answer engines that this site and
+// catherinehicks.com are one entity, not two.
+const personSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: AUTHOR,
+  url: AUTHOR_URL,
+  sameAs: [AUTHOR_URL],
+};
+---
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{pageTitle}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <link rel="alternate" type="application/rss+xml" title={SITE_TITLE} href="/rss.xml" />
+    <meta name="author" content={AUTHOR} />
+
+    <meta property="og:type" content={type} />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:site_name" content={SITE_TITLE} />
+    <meta name="twitter:card" content="summary" />
+
+    <script type="application/ld+json" set:html={JSON.stringify(personSchema)} />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <div class="wrap">
+        <a class="site-title" href="/">{SITE_TITLE}</a>
+        <nav class="site-nav" aria-label="Main">
+          {nav.map((item) => (
+            <a
+              href={item.href}
+              aria-current={
+                item.href === '/'
+                  ? path === '/' ? 'page' : undefined
+                  : path.startsWith(item.href) ? 'page' : undefined
+              }
+            >{item.label}</a>
+          ))}
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <div class="wrap">
+        <slot />
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap">
+        <p>
+          By <a href={AUTHOR_URL}>{AUTHOR}</a> ·
+          <a href="/rss.xml">RSS</a>
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

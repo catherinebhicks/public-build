@@ -1,0 +1,40 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { AUTHOR, AUTHOR_URL } from '../consts';
+---
+<BaseLayout
+  title="About"
+  description="Why this log exists and what goes in it."
+>
+  <h1>About</h1>
+
+  <p>
+    This is a working log. I build things — tools, sites, systems — and this is
+    where I write down how, while it's still happening rather than after it's
+    safely finished.
+  </p>
+
+  <p>
+    Finished work gets a case study: tidy, sequenced, with the wrong turns
+    quietly removed. That's a useful artifact and a dishonest record. The
+    interesting part of building is the part that gets edited out — the
+    decision made on partial information, the approach abandoned in week two,
+    the constraint nobody saw coming. So that's what goes here.
+  </p>
+
+  <h2>What to expect</h2>
+  <ul>
+    <li>Posts are dated and written as the work happens.</li>
+    <li>Each post belongs to a <a href="/projects/">project</a>, so any build can be read start to now.</li>
+    <li>Dead ends stay in. A reversed decision is kept, not deleted.</li>
+    <li>No schedule. Posts appear when there's something worth reporting.</li>
+  </ul>
+
+  <h2>Who's writing</h2>
+  <p>
+    <a href={AUTHOR_URL}>{AUTHOR}</a> — product designer. My work,
+    background, and case studies live at <a href={AUTHOR_URL}>catherinehicks.com</a>.
+  </p>
+
+  <p>You can follow along by <a href="/rss.xml">RSS</a>.</p>
+</BaseLayout>

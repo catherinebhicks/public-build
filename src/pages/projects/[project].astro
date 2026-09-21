@@ -1,0 +1,30 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PostList from '../../components/PostList.astro';
+import { getProjects, getPostsByProject, STATUS_LABEL, formatDate } from '../../lib/content';
+
+export async function getStaticPaths() {
+  const projects = await getProjects();
+  return projects.map((project) => ({
+    params: { project: project.id },
+    props: { project },
+  }));
+}
+
+const { project } = Astro.props;
+const posts = await getPostsByProject(project.id);
+---
+<BaseLayout title={project.data.name} description={project.data.blurb}>
+  <h1>{project.data.name}</h1>
+  <p class="lede">{project.data.blurb}</p>
+  <p class="meta">
+    {STATUS_LABEL[project.data.status]} · started {formatDate(project.data.startDate)}
+    {project.data.url && <> · <a href={project.data.url}>{project.data.url.replace(/^https?:\/\//, '')}</a></>}
+  </p>
+
+  <hr />
+
+  {posts.length === 0
+    ? <p>No posts on this project yet.</p>
+    : <PostList posts={posts} />}
+</BaseLayout>

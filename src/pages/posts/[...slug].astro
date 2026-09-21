@@ -1,0 +1,32 @@
+---
+import { render } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getPosts, getProjects, formatDate, isoDate } from '../../lib/content';
+
+export async function getStaticPaths() {
+  const posts = await getPosts();
+  return posts.map((post) => ({ params: { slug: post.id }, props: { post } }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+
+const projects = await getProjects();
+const project = projects.find((p) => p.id === post.data.project);
+---
+<BaseLayout title={post.data.title} description={post.data.summary} type="article">
+  <article>
+    <h1>{post.data.title}</h1>
+    <p class="meta">
+      <time datetime={isoDate(post.data.date)}>{formatDate(post.data.date)}</time>
+      {project && <> · <a href={`/projects/${project.id}/`}>{project.data.name}</a></>}
+      {post.data.draft && <> · <strong>Draft</strong></>}
+    </p>
+
+    <Content />
+
+    {post.data.tags.length > 0 && (
+      <p class="tags">Tagged: {post.data.tags.join(', ')}</p>
+    )}
+  </article>
+</BaseLayout>
