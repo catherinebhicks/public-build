@@ -33,7 +33,8 @@ draft: true                   # optional; drafts show locally, never in the buil
 ---
 ```
 
-Then write. Commit and push — Vercel builds and deploys.
+Then write. Commit and push to `main` — GitHub Actions builds and deploys to
+Pages (`.github/workflows/deploy.yml`). Live in about a minute.
 
 Frontmatter is schema-checked in `src/content.config.ts`. A malformed date or a
 missing summary **fails the build** rather than shipping a broken page.
