@@ -1,6 +1,6 @@
 ---
 title: Probe or move on
-date: 2026-09-20
+date: 2026-10-07
 summary: >-
   The one decision that makes this an agent rather than a chatbot, and why the
   follow-up limit is a guardrail rather than a quota.

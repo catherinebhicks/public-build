@@ -1,6 +1,6 @@
 ---
 title: Personalising your interview isn't consent to train on it
-date: 2026-09-20
+date: 2026-10-28
 summary: >-
   I asked what we'd actually give up by not training on user data. The answer
   made the decision easy — and separated two things that look like one.

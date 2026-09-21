@@ -1,6 +1,6 @@
 ---
 title: The connector that wouldn't read
-date: 2026-09-20
+date: 2026-10-12
 summary: >-
   An afternoon lost to a tool that kept failing, and the fix that wasn't a
   fix to the tool at all.

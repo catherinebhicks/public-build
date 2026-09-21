@@ -1,6 +1,6 @@
 ---
 title: Treat it like production
-date: 2026-09-20
+date: 2026-11-02
 summary: >-
   Deciding the QA bar for a portfolio project, and the two qualities that can
   block a release.

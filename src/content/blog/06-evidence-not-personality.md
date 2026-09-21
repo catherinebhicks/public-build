@@ -1,6 +1,6 @@
 ---
 title: Rate the evidence, not the person
-date: 2026-09-20
+date: 2026-10-02
 summary: >-
   One short sentence in the spec does more safety work than anything else in
   the document. The difference between "this answer didn't show influence"

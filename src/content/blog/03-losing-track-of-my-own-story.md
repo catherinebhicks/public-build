@@ -1,6 +1,6 @@
 ---
 title: I lost track of my own story
-date: 2026-09-20
+date: 2026-09-25
 summary: >-
   I tested the interview loop on a project I know inside out, and couldn't
   remember what I'd already said. That produced a feature — and then a second

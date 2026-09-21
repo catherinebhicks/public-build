@@ -1,6 +1,6 @@
 ---
 title: Thinking is not failure
-date: 2026-09-20
+date: 2026-10-14
 summary: >-
   How long the coach waits before it says anything — and why that one
   question about silence ended up choosing a vendor.

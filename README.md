@@ -15,9 +15,12 @@ served from a base path and Astro does not rewrite hardcoded hrefs — a bare
 
 ## Writing a post
 
-Create `src/content/blog/<slug>.md` — no date in the filename; the filename
-becomes the URL (`/public-build/posts/<slug>/`) and the displayed date comes
-from the `date:` field:
+Create `src/content/blog/NN-<slug>.md` — a two-digit sequence number, then the
+slug. The filename becomes the URL (`/public-build/posts/NN-<slug>/`); the
+displayed date comes from the `date:` field, not the filename.
+
+Publishing runs **Mon/Wed/Fri**. The sequence number is publication order, so
+the next post takes the next number.
 
 ```yaml
 ---

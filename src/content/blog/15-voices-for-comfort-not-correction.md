@@ -1,6 +1,6 @@
 ---
 title: Voices for comfort, not correction
-date: 2026-09-20
+date: 2026-10-23
 summary: >-
   Offering an Indian English interviewer voice, and the line that had to be
   drawn around it before it was safe to build.
