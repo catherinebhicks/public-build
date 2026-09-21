@@ -15,4 +15,4 @@ Allow: /
 User-agent: Google-Extended
 Allow: /
 
-Sitemap: https://public-build.catherinehicks.com/sitemap-index.xml
+Sitemap: https://catherinebhicks.github.io/public-build/sitemap-index.xml

@@ -3,8 +3,15 @@
 A working log of projects built in the open. Static site, no CMS, no database,
 no admin panel — publishing is a commit.
 
-Live: https://public-build.catherinehicks.com
+Live: https://catherinebhicks.github.io/public-build/
 (temporary — see [docs/CUTOVER.md](docs/CUTOVER.md))
+
+Deployed by GitHub Actions on every push to `main`
+(`.github/workflows/deploy.yml`).
+
+**Internal links must go through `url()` in `src/lib/url.ts`.** The site is
+served from a base path and Astro does not rewrite hardcoded hrefs — a bare
+`/posts/x` silently 404s in production while working fine in dev.
 
 ## Writing a post
 

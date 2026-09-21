@@ -2,6 +2,7 @@
 import { render } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getPosts, getProjects, formatDateShort, isoDate } from '../../lib/content';
+import { url } from '../../lib/url';
 
 export async function getStaticPaths() {
   const posts = await getPosts();
@@ -18,7 +19,7 @@ const project = projects.find((p) => p.id === post.data.project);
 // Entries with no value are dropped rather than rendered empty.
 const meta = [
   { label: 'Date', value: formatDateShort(post.data.date) },
-  project && { label: 'Project', value: project.data.name, href: `/projects/${project.id}/` },
+  project && { label: 'Project', value: project.data.name, href: url(`/projects/${project.id}/`) },
   post.data.tags.length > 0 && { label: 'Topics', value: post.data.tags.join(', ') },
   post.data.draft && { label: 'Status', value: 'Draft' },
 ].filter(Boolean);
@@ -28,7 +29,7 @@ const meta = [
     <header class="hero">
       {project && (
         <p class="eyebrow">
-          <a href={`/projects/${project.id}/`}>{project.data.name}</a>
+          <a href={url(`/projects/${project.id}/`)}>{project.data.name}</a>
         </p>
       )}
 

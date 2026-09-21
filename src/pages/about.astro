@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { AUTHOR, AUTHOR_URL } from '../consts';
+import { url } from '../lib/url';
 ---
 <BaseLayout
   title="About"
@@ -25,7 +26,7 @@ import { AUTHOR, AUTHOR_URL } from '../consts';
   <h2>What to expect</h2>
   <ul>
     <li>Posts are dated and written as the work happens.</li>
-    <li>Each post belongs to a <a href="/projects/">project</a>, so any build can be read start to now.</li>
+    <li>Each post belongs to a <a href={url("/projects/")}>project</a>, so any build can be read start to now.</li>
     <li>Dead ends stay in. A reversed decision is kept, not deleted.</li>
     <li>No schedule. Posts appear when there's something worth reporting.</li>
   </ul>
@@ -36,5 +37,5 @@ import { AUTHOR, AUTHOR_URL } from '../consts';
     background, and case studies live at <a href={AUTHOR_URL}>catherinehicks.com</a>.
   </p>
 
-  <p>You can follow along by <a href="/rss.xml">RSS</a>.</p>
+  <p>You can follow along by <a href={url("/rss.xml")}>RSS</a>.</p>
 </BaseLayout>

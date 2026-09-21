@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getProjects, getPosts, STATUS_ORDER, STATUS_LABEL } from '../../lib/content';
+import { url } from '../../lib/url';
 
 const projects = await getProjects();
 const posts = await getPosts();
@@ -32,7 +33,7 @@ const groups = STATUS_ORDER.map((status) => ({
       <ul class="project-list">
         {group.items.map((project) => (
           <li>
-            <h3><a href={`/projects/${project.id}/`}>{project.data.name}</a></h3>
+            <h3><a href={url(`/projects/${project.id}/`)}>{project.data.name}</a></h3>
             <p>{project.data.blurb}</p>
             <p class="meta">
               {postCount(project.id)} {postCount(project.id) === 1 ? 'post' : 'posts'}

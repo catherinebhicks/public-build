@@ -3,6 +3,7 @@ import { SITE_TITLE, SITE_DESCRIPTION, AUTHOR, AUTHOR_URL } from '../consts';
 // Self-hosted, so the site makes no third-party font request.
 import '@fontsource-variable/inter';
 import '@fontsource-variable/space-grotesk';
+import { url } from '../lib/url';
 import '../styles/global.css';
 
 interface Props {
@@ -19,10 +20,11 @@ const canonical = new URL(Astro.url.pathname, Astro.site).href;
 const path = Astro.url.pathname;
 
 const nav = [
-  { href: '/', label: 'Posts' },
-  { href: '/projects/', label: 'Projects' },
-  { href: '/about/', label: 'About' },
+  { href: url('/'), label: 'Posts' },
+  { href: url('/projects/'), label: 'Projects' },
+  { href: url('/about/'), label: 'About' },
 ];
+const home = url('/');
 
 // Person schema with sameAs pointing home. This is the mitigation for
 // publishing on a subdomain: it tells answer engines that this site and
@@ -42,7 +44,7 @@ const personSchema = {
     <title>{pageTitle}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical} />
-    <link rel="alternate" type="application/rss+xml" title={SITE_TITLE} href="/rss.xml" />
+    <link rel="alternate" type="application/rss+xml" title={SITE_TITLE} href={url("/rss.xml")} />
     <meta name="author" content={AUTHOR} />
 
     <meta property="og:type" content={type} />
@@ -59,14 +61,14 @@ const personSchema = {
 
     <header class="site-header">
       <div class="wrap">
-        <a class="site-title" href="/">{SITE_TITLE}</a>
+        <a class="site-title" href={home}>{SITE_TITLE}</a>
         <nav class="site-nav" aria-label="Main">
           {nav.map((item) => (
             <a
               href={item.href}
               aria-current={
-                item.href === '/'
-                  ? path === '/' ? 'page' : undefined
+                item.href === home
+                  ? path === home ? 'page' : undefined
                   : path.startsWith(item.href) ? 'page' : undefined
               }
             >{item.label}</a>
@@ -86,7 +88,7 @@ const personSchema = {
         <p>
           By <a href={AUTHOR_URL}>{AUTHOR}</a>
           {' · '}
-          <a href="/rss.xml">RSS</a>
+          <a href={url("/rss.xml")}>RSS</a>
         </p>
       </div>
     </footer>

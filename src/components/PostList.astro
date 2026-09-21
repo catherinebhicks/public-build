@@ -1,5 +1,6 @@
 ---
 import { formatDate, isoDate, type Post } from '../lib/content';
+import { url } from '../lib/url';
 
 interface Props {
   posts: Post[];
@@ -13,13 +14,13 @@ const { posts, showProject = false, projectNames = {} } = Astro.props;
 <ul class="post-list">
   {posts.map((post) => (
     <li>
-      <h2><a href={`/posts/${post.id}/`}>{post.data.title}</a></h2>
+      <h2><a href={url(`/posts/${post.id}/`)}>{post.data.title}</a></h2>
       <p class="meta">
         <time datetime={isoDate(post.data.date)}>{formatDate(post.data.date)}</time>
         {showProject && post.data.project && (
           <>
             {' · '}
-            <a href={`/projects/${post.data.project}/`}>
+            <a href={url(`/projects/${post.data.project}/`)}>
               {projectNames[post.data.project] ?? post.data.project}
             </a>
           </>
