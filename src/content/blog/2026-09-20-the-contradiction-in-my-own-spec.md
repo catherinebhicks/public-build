@@ -1,89 +1,107 @@
 ---
-title: The contradiction in my own spec
+title: I changed my mind mid-sentence
 date: 2026-09-20
 summary: >-
-  A consistency pass found my PRD arguing with itself: a stated principle
-  against scripting, and a clause permitting exactly that. Resolving it
-  meant refusing users something they will explicitly ask for.
+  I said yes to giving people example answers, then reversed myself two turns
+  later. The stale yes survived in the PRD for days and contradicted the
+  product's own stated principle.
 project: ux-interview-coach
 tags: [prd, principles, reversals]
 draft: true
 ---
 
-A consistency pass through the PRD turned up the product arguing with
-itself.
+We were deep in edge cases. The question was what happens if someone asks for
+an example answer, and my first response was immediate:
 
-The principles at the top are unambiguous. Coaching over answer generation.
-Authenticity over scripting. Feedback should help candidates sound more like
-themselves, not like AI. The agent surfaces gaps and asks focused questions;
-it does not rewrite your answer for you.
+> If they ask for answers like, how would I answer that? Absolutely give them
+> an answer.
 
-And then, further down in Section 26 — User-Controlled Help — a clause
-permitting the coach to provide **a generic example answer if explicitly
-requested**.
+Two turns later, asked whether that meant a full draft or an outline, I
+reversed myself in real time — you can watch me get there:
 
-Both of those were written by me, in the same document, and I hadn't noticed
-they couldn't both be true.
+> Outline. I think in this case, what should I say? You should say What— Oh.
+> **Ooh, this is a good one. My brain. Okay.** Tell them we won't tell them
+> what to say but we will guide them into key points that they can make. Does
+> that make sense?
 
-## Why the clause was there
+And later, sharper:
 
-I know exactly why I wrote it, because I'd make the same argument again.
+> I don't want to give them something they can just memorize rote.
 
-Someone is stuck. They've been staring at "tell me about a time you
-disagreed with a stakeholder" for four minutes and produced nothing. They ask
-for an example — not to memorise, just to see the shape of the thing. Refusing
-feels pedantic. Worse, it feels like the tool is withholding help to satisfy
-a principle the user never agreed to.
+The second answer is right. The first one made it into the PRD anyway — a
+clause in Section 26, User-Controlled Help, permitting *a generic example
+answer if explicitly requested* — and sat there contradicting the document's
+own first principles for days before a consistency pass caught it.
 
-The clause was an escape hatch for the moment the coaching stance becomes
-unhelpful. It was written out of sympathy, which is the most dangerous reason
-to write anything into a spec.
+## Why I said yes the first time
+
+I'd make the same mistake again, because the sympathetic case is vivid.
+
+Someone is stuck. They've been staring at "tell me about a time you disagreed
+with a stakeholder" for four minutes and produced nothing. They ask for an
+example — not to memorise, they say, just to see the shape. Saying no feels
+pedantic, like withholding help to satisfy a principle they never agreed to.
+
+That's a real moment and the instinct to help is correct. The clause was
+written out of sympathy, which is the most dangerous reason to write anything
+into a spec, because it feels like kindness right up until you look at what it
+does.
 
 ## Why it had to go
 
 Because the escape hatch isn't an edge case. It's the main road.
 
-If a generic example answer is available on request, the fastest path through
-any hard question is to request it. The hard questions are precisely the ones
-worth practising, so the feature routes users around the only part of the
-product that works. Not as an abuse — as the rational response to being stuck.
+If a generic example is available on request, the fastest route through any
+hard question is to request it. The hard questions are the ones worth
+practising. So the feature routes users around the only part of the product
+that works — not through abuse, but as the rational response to being stuck.
 
-And you can't use the output. You cannot take a generic answer about
-disagreeing with a stakeholder into an interview, because you didn't disagree
-with that stakeholder. The interviewer's first follow-up lands on a story
-that isn't yours, and now you're worse off than if you'd stumbled through
-something true.
+And the output is unusable. You can't take a generic answer about disagreeing
+with a stakeholder into an interview, because you didn't disagree with that
+stakeholder. The interviewer's first follow-up lands on a story that isn't
+yours and you're worse off than if you'd stumbled through something true.
 
-The clause offered relief from the discomfort of being stuck. But being stuck
-in practice *is the practice*. That's the rep. Removing it feels like help and
-isn't.
+Underneath all of it: interviewing is a performance skill, and improvement
+requires practice, feedback, reflection, repetition. The discomfort of being
+stuck in practice *is the practice*. That's the rep. Removing it feels like
+help and isn't.
 
 ## The rule now
 
-> Do not provide a canned or example answer for memorisation, even when
-> explicitly requested. Instead, guide the user toward their own answer by
-> focusing them on the relevant evidence, key points, context, memory-jogging
-> questions, and an appropriate structure such as STAR when useful.
+> Do not provide a canned or generic example answer for memorisation, even
+> when explicitly requested. Instead, guide the user toward their own answer
+> using relevant focus areas, evidence from their own experience, key points,
+> memory-jogging questions, and an appropriate structure such as STAR when
+> useful.
 
-Note what that isn't. It isn't refusal. The user asks for help and gets help
-— just not the kind that does the work for them. Memory-jogging questions are
-the mechanism: *what was the project, who disagreed, what did you actually
-say, what happened afterwards.* Most people who are stuck aren't missing an
-answer. They're missing a way back into their own experience.
+Note what that isn't. It isn't refusal. You ask for help, you get help — just
+not the kind that does the work for you.
 
-STAR is offered as a **structure to pour their material into**, never as a
-template with the content pre-filled.
+Memory-jogging questions are the mechanism: *what was the project, who
+disagreed, what did you actually say, what happened afterwards.* Most people
+who are stuck aren't missing an answer. They're missing a way back into their
+own experience.
 
-The distinction is narrow and it's the whole product. Give someone a
-scaffold, and they build something that's theirs. Give them a finished
-answer, and they have a script they'll deliver badly under pressure.
+STAR is offered as a **scaffold to pour your own material into**, never a
+template with the content pre-filled — and the system doesn't grade answers
+against it either. A senior designer explaining a systems trade-off can give
+an excellent answer that follows no STAR sequence at all.
 
-## What I'm taking from this
+## What the reversal cost, and what it teaches
 
-The contradiction survived several passes because both halves read as
+The stale clause survived several passes because both halves read as
 reasonable in isolation. Principles at the top of a document are cheap —
-everyone writes "authenticity over scripting." What tests them is the clause
+everybody writes "authenticity over scripting." What tests them is the clause
 three sections down where honouring the principle means telling a user no.
 
-I'm logging this one because the version of me that wrote the escape hatch
-had the better intentions and the worse product.
+The technical spec now carries the paper trail explicitly: *current decision
+supersedes earlier exploratory discussion that considered example answers.*
+That line exists so nobody — including me in three months — re-litigates a
+settled question by finding the older text.
+
+The version of me that wrote the escape hatch had the better intentions and
+the worse product. Worth keeping the record of that.
+
+**Revisit if:** user research shows a genuine need for examples as a teaching
+aid. Even then they'd have to be clearly separated from the candidate's own
+answer, not offered as a substitute for it.
