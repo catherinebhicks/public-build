@@ -1,4 +1,4 @@
-/* Public Build — one stylesheet, no framework.
+/* Building in Public — one stylesheet, no framework.
    Light palette on :root; dark overrides in the media query only. */
 
 :root {

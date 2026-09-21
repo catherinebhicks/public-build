@@ -1,4 +1,4 @@
-# Public Build
+# Building in Public
 
 A working log of projects built in the open. Static site, no CMS, no database,
 no admin panel — publishing is a commit.
