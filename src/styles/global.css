@@ -1,23 +1,59 @@
 /* Building in Public — one stylesheet, no framework.
+
+   Type scale, spacing scale and the editorial hero structure are taken from
+   the Healthcare & Public Health portfolio Figma library
+   (wzfyhYvDRA1Cds9vA7qMbh, `Study Hero` set 972:1697, Editorial variant).
+   The COLOUR system is deliberately NOT taken from it: that file's blues
+   (#1552f0 / #1a52cc) are cool and saturated and fight this site's warm
+   neutral ground, and its per-domain colour fields have no meaning on a log
+   where a post has no domain. Palette stays this site's own.
+
    Light palette on :root; dark overrides in the media query only. */
 
 :root {
+  /* --- colour ------------------------------------------------------- */
   --bg: #fdfdfc;
   --surface: #f4f4f1;
-  --text: #1c1c1a;
-  --muted: #56564f;      /* 7.0:1 on --bg  */
+  --text: #1c1c1a;       /* 16.8:1 on --bg */
+  --muted: #56564f;      /*  7.3:1 on --bg */
   --line: #d9d9d3;
-  --link: #1a4fb4;       /* 7.1:1 on --bg  */
-  --accent: #8a4b00;     /* 6.4:1 on --bg  */
+  --link: #1a4fb4;       /*  7.3:1 on --bg */
+  --accent: #8a4b00;     /*  6.7:1 on --bg */
   --focus: #1a4fb4;
 
+  /* Status chips carry white text; ratios are white-on-chip. */
+  --chip-active: #8a4b00;   /* 6.8:1 */
+  --chip-shipped: #1f6b4a;  /* 6.4:1 */
+  --chip-parked: #56564f;   /* 7.4:1 */
+
+  /* --- spacing (from Figma --space-*) -------------------------------- */
+  --space-2xs: 0.5rem;    /*  8 */
+  --space-xs: 0.75rem;    /* 12 */
+  --space-sm: 1rem;       /* 16 */
+  --space-md: 1.25rem;    /* 20 */
+  --space-lg: 1.5rem;     /* 24 */
+  --space-xl: 2rem;       /* 32 */
+  --space-2xl: 2.5rem;    /* 40 */
+  --space-5xl: 5rem;      /* 80 */
+
+  /* --- type --------------------------------------------------------- */
   /* rem, not ch: `ch` resolves against each element's own font, so the
-     header/footer (sans, smaller) and main (serif) would each compute a
-     different column width and the page would misalign. */
+     header/footer (Inter, smaller) and main would each compute a different
+     column width and the page would misalign. */
   --measure: 43rem;
-  --font: ui-serif, Georgia, Cambria, "Times New Roman", serif;
-  --font-ui: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font: "Inter Variable", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-display: "Space Grotesk Variable", "Inter Variable", ui-sans-serif, system-ui, sans-serif;
   --font-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, monospace;
+
+  /* Figma Display/Hero is 72/54/38 across Desktop/Tablet/Mobile.
+     clamp() interpolates the same range fluidly. */
+  --size-hero: clamp(2.375rem, 1.2rem + 4.6vw, 4.5rem);
+  --size-h2: clamp(1.75rem, 1.35rem + 1.5vw, 2.375rem);  /* Heading/H2 38 */
+  --size-lede: 1.4375rem;   /* Body/Lede Large 23 */
+  --size-body: 1.0625rem;
+  --size-meta: 0.9375rem;   /* UI/Meta 15 */
+  --size-eyebrow: 0.8125rem;/* Eyebrow 13 */
+  --size-chip: 0.6875rem;   /* Label/Chip 11 */
 
   color-scheme: light dark;
 }
@@ -26,12 +62,16 @@
   :root {
     --bg: #16161a;
     --surface: #202026;
-    --text: #e8e8e4;
-    --muted: #a6a69e;    /* 7.3:1 on --bg */
+    --text: #e8e8e4;     /* 14.7:1 on --bg */
+    --muted: #a6a69e;    /*  7.4:1 on --bg */
     --line: #33333a;
-    --link: #8fb4ff;     /* 8.4:1 on --bg */
-    --accent: #e0a86a;   /* 9.0:1 on --bg */
+    --link: #8fb4ff;     /*  8.7:1 on --bg */
+    --accent: #e0a86a;   /*  8.6:1 on --bg */
     --focus: #8fb4ff;
+
+    --chip-active: #8a4b00;
+    --chip-shipped: #1f6b4a;
+    --chip-parked: #55555e;
   }
 }
 
@@ -77,8 +117,7 @@ body {
 .site-header {
   border-bottom: 1px solid var(--line);
   padding-block: 1.5rem;
-  font-family: var(--font-ui);
-}
+  }
 .site-header .wrap {
   display: flex;
   flex-wrap: wrap;
@@ -87,9 +126,10 @@ body {
   justify-content: space-between;
 }
 .site-title {
-  font-weight: 650;
-  font-size: 1.0625rem;
-  letter-spacing: -0.01em;
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 1.125rem;
+  letter-spacing: -0.015em;
   text-decoration: none;
   color: var(--text);
 }
@@ -105,16 +145,18 @@ body {
 
 main { padding-block: 3rem 4rem; }
 
-/* --- typography --- */
+/* --- typography ------------------------------------------------------
+   Display sizes and tracking mirror Figma's Display/Hero and Heading/H2
+   (Space Grotesk Medium, line-height 1.02 and 1.15). */
 h1, h2, h3 {
-  font-family: var(--font-ui);
-  line-height: 1.25;
-  letter-spacing: -0.015em;
-  margin-block: 2.25rem 0.75rem;
+  font-family: var(--font-display);
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  margin-block: var(--space-xl) var(--space-xs);
 }
-h1 { font-size: 1.875rem; margin-block-start: 0; }
-h2 { font-size: 1.3125rem; }
-h3 { font-size: 1.0625rem; }
+h1 { font-size: var(--size-h2); line-height: 1.08; margin-block-start: 0; }
+h2 { font-size: 1.3125rem; line-height: 1.2; }
+h3 { font-size: 1.0625rem; line-height: 1.25; letter-spacing: -0.005em; }
 
 p, ul, ol, blockquote { margin-block: 0 1.25rem; }
 ul, ol { padding-inline-start: 1.5rem; }
@@ -125,7 +167,7 @@ a:hover { text-decoration-thickness: 2px; }
 
 blockquote {
   margin-inline: 0;
-  padding-inline-start: 1.25rem;
+  padding-inline-start: var(--space-md);
   border-inline-start: 3px solid var(--line);
   color: var(--muted);
 }
@@ -135,11 +177,11 @@ code {
   font-size: 0.875em;
   background: var(--surface);
   padding: 0.1em 0.35em;
-  border-radius: 3px;
+  border-radius: 4px;
 }
 pre {
   background: var(--surface);
-  padding: 1rem;
+  padding: var(--space-sm);
   border-radius: 6px;
   overflow-x: auto;
   font-size: 0.875rem;
@@ -147,17 +189,16 @@ pre {
 }
 pre code { background: none; padding: 0; font-size: inherit; }
 
-hr { border: 0; border-top: 1px solid var(--line); margin-block: 2.5rem; }
+hr { border: 0; border-top: 1px solid var(--line); margin-block: var(--space-2xl); }
 
 img, video { max-width: 100%; height: auto; }
 
-table { border-collapse: collapse; width: 100%; font-size: 0.9375rem; }
+table { border-collapse: collapse; width: 100%; font-size: var(--size-meta); }
 th, td { text-align: left; padding: 0.5rem 0.75rem; border-bottom: 1px solid var(--line); }
 
 /* --- shared bits --- */
 .meta {
-  font-family: var(--font-ui);
-  font-size: 0.875rem;
+    font-size: 0.875rem;
   color: var(--muted);
 }
 .lede {
@@ -192,13 +233,12 @@ th, td { text-align: left; padding: 0.5rem 0.75rem; border-bottom: 1px solid var
 .project-list h3 a:hover { color: var(--link); text-decoration: underline; }
 .project-list p { margin-block: 0.25rem 0; color: var(--muted); font-size: 0.9375rem; }
 
-.tags { font-family: var(--font-ui); font-size: 0.8125rem; color: var(--muted); }
+.tags { font-size: 0.8125rem; color: var(--muted); }
 
 .site-footer {
   border-top: 1px solid var(--line);
   padding-block: 2rem 3rem;
-  font-family: var(--font-ui);
-  font-size: 0.875rem;
+    font-size: 0.875rem;
   color: var(--muted);
 }
 .site-footer a { color: var(--muted); }
@@ -207,3 +247,100 @@ th, td { text-align: left; padding: 0.5rem 0.75rem; border-bottom: 1px solid var
   h1 { font-size: 1.625rem; }
   main { padding-block: 2rem 3rem; }
 }
+
+/* --- editorial hero --------------------------------------------------
+   Adapted from Figma `Study Hero`, Editorial variant: eyebrow → title →
+   byline → lede → rule-bounded meta row. Colours are this site's. */
+.hero { margin-block-end: var(--space-2xl); }
+
+.hero .eyebrow {
+  font-size: var(--size-eyebrow);
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--link);
+  margin-block: 0 var(--space-xs);
+}
+.hero .eyebrow a { color: inherit; }
+
+.hero h1 {
+  font-size: var(--size-hero);
+  line-height: 1.02;
+  letter-spacing: -0.01em;
+  margin-block: 0 var(--space-xs);
+}
+
+.hero .byline {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: var(--muted);
+  margin-block: 0 var(--space-md);
+}
+
+.hero .lede {
+  font-size: var(--size-lede);
+  line-height: 1.5;
+  color: var(--text);
+  margin-block: 0 var(--space-xl);
+}
+
+/* meta row: rules top and bottom, columns divided by hairlines */
+.meta-row {
+  display: flex;
+  flex-wrap: wrap;
+  border-block: 1px solid var(--line);
+  margin-block: 0;
+  padding: 0;
+  list-style: none;
+}
+.meta-row > div {
+  flex: 1 0 0;
+  min-width: 9rem;
+  padding-block: var(--space-md);
+  padding-inline: var(--space-lg);
+  border-inline-start: 1px solid var(--line);
+}
+.meta-row > div:first-child { padding-inline-start: 0; border-inline-start: 0; }
+.meta-row dt {
+  font-size: var(--size-chip);
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--link);
+  margin-block-end: var(--space-2xs);
+}
+.meta-row dd {
+  margin: 0;
+  font-size: var(--size-meta);
+  font-weight: 500;
+  color: var(--text);
+}
+
+@media (max-width: 40rem) {
+  .meta-row { display: block; }
+  .meta-row > div {
+    padding-inline: 0;
+    border-inline-start: 0;
+    border-block-start: 1px solid var(--line);
+    padding-block: var(--space-sm);
+  }
+  .meta-row > div:first-child { border-block-start: 0; }
+}
+
+/* --- status chip ----------------------------------------------------- */
+.chip {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--space-2xs) var(--space-sm);
+  border-radius: 9999px;
+  background: var(--chip-parked);
+  color: #fff;
+  font-size: var(--size-eyebrow);
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+.chip[data-status="active"] { background: var(--chip-active); }
+.chip[data-status="shipped"] { background: var(--chip-shipped); }
+.chip[data-status="parked"] { background: var(--chip-parked); }

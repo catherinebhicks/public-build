@@ -44,6 +44,17 @@ export function formatDate(date: Date): string {
   });
 }
 
+// Compact form for the meta row, whose columns are far narrower than the
+// 1312px canvas the Figma hero assumes.
+export function formatDateShort(date: Date): string {
+  return date.toLocaleDateString('en-US', {
+    year: 'numeric',
+    month: 'short',
+    day: 'numeric',
+    timeZone: 'UTC',
+  });
+}
+
 // For <time datetime="...">, which needs a machine-readable value.
 export function isoDate(date: Date): string {
   return date.toISOString().slice(0, 10);

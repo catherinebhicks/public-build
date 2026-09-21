@@ -1,7 +1,7 @@
 ---
 import { render } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { getPosts, getProjects, formatDate, isoDate } from '../../lib/content';
+import { getPosts, getProjects, formatDateShort, isoDate } from '../../lib/content';
 
 export async function getStaticPaths() {
   const posts = await getPosts();
@@ -13,20 +13,45 @@ const { Content } = await render(post);
 
 const projects = await getProjects();
 const project = projects.find((p) => p.id === post.data.project);
+
+// Meta row, adapted from the Figma hero's ROLE / CONTEXT / SCOPE / OUTCOME.
+// Entries with no value are dropped rather than rendered empty.
+const meta = [
+  { label: 'Date', value: formatDateShort(post.data.date) },
+  project && { label: 'Project', value: project.data.name, href: `/projects/${project.id}/` },
+  post.data.tags.length > 0 && { label: 'Topics', value: post.data.tags.join(', ') },
+  post.data.draft && { label: 'Status', value: 'Draft' },
+].filter(Boolean);
 ---
 <BaseLayout title={post.data.title} description={post.data.summary} type="article">
   <article>
-    <h1>{post.data.title}</h1>
-    <p class="meta">
-      <time datetime={isoDate(post.data.date)}>{formatDate(post.data.date)}</time>
-      {project && <> · <a href={`/projects/${project.id}/`}>{project.data.name}</a></>}
-      {post.data.draft && <> · <strong>Draft</strong></>}
-    </p>
+    <header class="hero">
+      {project && (
+        <p class="eyebrow">
+          <a href={`/projects/${project.id}/`}>{project.data.name}</a>
+        </p>
+      )}
+
+      <h1>{post.data.title}</h1>
+
+      <p class="lede">{post.data.summary}</p>
+
+      <dl class="meta-row">
+        {meta.map((item) => (
+          <div>
+            <dt>{item.label}</dt>
+            <dd>
+              {item.label === 'Date'
+                ? <time datetime={isoDate(post.data.date)}>{item.value}</time>
+                : item.href
+                  ? <a href={item.href}>{item.value}</a>
+                  : item.value}
+            </dd>
+          </div>
+        ))}
+      </dl>
+    </header>
 
     <Content />
-
-    {post.data.tags.length > 0 && (
-      <p class="tags">Tagged: {post.data.tags.join(', ')}</p>
-    )}
   </article>
 </BaseLayout>

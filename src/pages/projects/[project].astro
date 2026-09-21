@@ -1,7 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import PostList from '../../components/PostList.astro';
-import { getProjects, getPostsByProject, STATUS_LABEL, formatDate } from '../../lib/content';
+import { getProjects, getPostsByProject, STATUS_LABEL, formatDateShort, isoDate } from '../../lib/content';
 
 export async function getStaticPaths() {
   const projects = await getProjects();
@@ -15,14 +15,34 @@ const { project } = Astro.props;
 const posts = await getPostsByProject(project.id);
 ---
 <BaseLayout title={project.data.name} description={project.data.blurb}>
-  <h1>{project.data.name}</h1>
-  <p class="lede">{project.data.blurb}</p>
-  <p class="meta">
-    {STATUS_LABEL[project.data.status]} · started {formatDate(project.data.startDate)}
-    {project.data.url && <> · <a href={project.data.url}>{project.data.url.replace(/^https?:\/\//, '')}</a></>}
-  </p>
+  <header class="hero">
+    <p class="eyebrow">
+      <span class="chip" data-status={project.data.status}>
+        {STATUS_LABEL[project.data.status]}
+      </span>
+    </p>
 
-  <hr />
+    <h1>{project.data.name}</h1>
+
+    <p class="lede">{project.data.blurb}</p>
+
+    <dl class="meta-row">
+      <div>
+        <dt>Started</dt>
+        <dd><time datetime={isoDate(project.data.startDate)}>{formatDateShort(project.data.startDate)}</time></dd>
+      </div>
+      <div>
+        <dt>Posts</dt>
+        <dd>{posts.length}</dd>
+      </div>
+      {project.data.url && (
+        <div>
+          <dt>Live</dt>
+          <dd><a href={project.data.url}>{project.data.url.replace(/^https?:\/\//, '')}</a></dd>
+        </div>
+      )}
+    </dl>
+  </header>
 
   {posts.length === 0
     ? <p>No posts on this project yet.</p>
