@@ -1,6 +1,5 @@
 ---
 title: Building this one in the open
-date: 2026-09-23
 summary: >-
   Starting a new project, and starting the log at the same time. Why the log is
   a folder of text files instead of a blogging platform, and what the first

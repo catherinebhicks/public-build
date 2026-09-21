@@ -1,6 +1,5 @@
 ---
 title: Designed to support GDPR, not "GDPR compliant"
-date: 2026-10-30
 summary: >-
   Reviewing every vendor that would touch user data, and the rule that stops a
   product promising something its infrastructure can't deliver.

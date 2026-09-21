@@ -1,6 +1,5 @@
 ---
 title: Seven things good feedback has to do
-date: 2026-10-05
 summary: >-
   The evaluation matrix that went into the spec — the dimensions the agent's
   own output gets judged on, and where they came from.

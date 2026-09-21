@@ -1,6 +1,5 @@
 ---
 title: I changed my mind mid-sentence
-date: 2026-10-09
 summary: >-
   I said yes to giving people example answers, then reversed myself two turns
   later. The stale yes survived in the PRD for days and contradicted the

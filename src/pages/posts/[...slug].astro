@@ -18,7 +18,7 @@ const project = projects.find((p) => p.id === post.data.project);
 // Meta row, adapted from the Figma hero's ROLE / CONTEXT / SCOPE / OUTCOME.
 // Entries with no value are dropped rather than rendered empty.
 const meta = [
-  { label: 'Date', value: formatDateShort(post.data.date) },
+  post.data.date && { label: 'Date', value: formatDateShort(post.data.date) },
   project && { label: 'Project', value: project.data.name, href: url(`/projects/${project.id}/`) },
   post.data.tags.length > 0 && { label: 'Topics', value: post.data.tags.join(', ') },
   post.data.draft && { label: 'Status', value: 'Draft' },
@@ -42,7 +42,7 @@ const meta = [
           <div>
             <dt>{item.label}</dt>
             <dd>
-              {item.label === 'Date'
+              {item.label === 'Date' && post.data.date
                 ? <time datetime={isoDate(post.data.date)}>{item.value}</time>
                 : item.href
                   ? <a href={item.href}>{item.value}</a>

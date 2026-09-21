@@ -1,6 +1,5 @@
 ---
 title: The portfolio goal changed the architecture
-date: 2026-10-26
 summary: >-
   One question — what does a real AI workflow look like in a portfolio? —
   moved the whole system toward visible orchestration. A non-engineering

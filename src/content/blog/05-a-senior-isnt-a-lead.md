@@ -1,6 +1,5 @@
 ---
 title: A senior isn't a lead
-date: 2026-09-30
 summary: >-
   Calibrating what "good" means by career level, and the correction that
   mattered most — seniority changes the evidence you're looking for, not the

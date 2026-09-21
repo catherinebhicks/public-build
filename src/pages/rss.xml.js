@@ -4,7 +4,9 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 import { url } from '../lib/url';
 
 export async function GET(context) {
-  const posts = await getPosts();
+  // Undated posts are unpublished drafts. They surface locally in dev but
+  // must never reach the feed, where pubDate is required.
+  const posts = (await getPosts()).filter((post) => post.data.date);
   return rss({
     title: SITE_TITLE,
     description: SITE_DESCRIPTION,

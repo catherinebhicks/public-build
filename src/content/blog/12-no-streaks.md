@@ -1,6 +1,5 @@
 ---
 title: No streaks
-date: 2026-10-16
 summary: >-
   Gamification came up and was rejected in a sentence. The reasoning is worth
   more than the decision.

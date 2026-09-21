@@ -8,8 +8,14 @@ export type Project = CollectionEntry<'projects'>;
 // so a draft can never leak through a page that forgot to filter.
 const isVisible = (post: Post) => import.meta.env.DEV || !post.data.draft;
 
-const newestFirst = (a: Post, b: Post) =>
-  b.data.date.valueOf() - a.data.date.valueOf();
+// Undated posts are drafts in progress, so they sort to the top where
+// they're visible while writing. Everything dated follows, newest first.
+const newestFirst = (a: Post, b: Post) => {
+  if (!a.data.date && !b.data.date) return a.id.localeCompare(b.id);
+  if (!a.data.date) return -1;
+  if (!b.data.date) return 1;
+  return b.data.date.valueOf() - a.data.date.valueOf();
+};
 
 export async function getPosts(): Promise<Post[]> {
   const posts = await getCollection('blog', isVisible);

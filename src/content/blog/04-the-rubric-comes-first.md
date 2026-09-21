@@ -1,6 +1,5 @@
 ---
 title: The rubric comes first
-date: 2026-09-28
 summary: >-
   The temptation is to hand an answer to a model and ask what it thinks. The
   first real decision was to refuse to do that.

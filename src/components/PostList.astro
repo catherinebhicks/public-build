@@ -16,7 +16,11 @@ const { posts, showProject = false, projectNames = {} } = Astro.props;
     <li>
       <h2><a href={url(`/posts/${post.id}/`)}>{post.data.title}</a></h2>
       <p class="meta">
-        <time datetime={isoDate(post.data.date)}>{formatDate(post.data.date)}</time>
+        {/* An undated post has no date to lead with, so the Draft badge
+            takes that slot. Separators follow the first item, never open. */}
+        {post.data.date
+          ? <time datetime={isoDate(post.data.date)}>{formatDate(post.data.date)}</time>
+          : <strong>Draft</strong>}
         {showProject && post.data.project && (
           <>
             {' · '}
@@ -25,7 +29,7 @@ const { posts, showProject = false, projectNames = {} } = Astro.props;
             </a>
           </>
         )}
-        {post.data.draft && <> · <strong>Draft</strong></>}
+        {post.data.date && post.data.draft && <> · <strong>Draft</strong></>}
       </p>
       <p>{post.data.summary}</p>
     </li>

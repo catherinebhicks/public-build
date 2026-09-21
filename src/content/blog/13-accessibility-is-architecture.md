@@ -1,6 +1,5 @@
 ---
 title: Accessibility is architecture
-date: 2026-10-19
 summary: >-
   Committing to WCAG 2.2 AA before anything was built, and the feature that
   commitment immediately forced into V1 scope.

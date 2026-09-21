@@ -1,6 +1,5 @@
 ---
 title: Why not real-time voice
-date: 2026-10-21
 summary: >-
   Voice-to-voice feels better and I didn't pick it. Trading polish for
   something I could open up and look inside.

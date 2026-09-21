@@ -1,6 +1,5 @@
 ---
 title: I didn't know what an agent was
-date: 2026-09-21
 summary: >-
   Starting a build from genuine ignorance. What an agent actually is, and why
   that shape turned out to fit the thing I wanted to make.
