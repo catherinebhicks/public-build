@@ -23,7 +23,7 @@ A **question-level priority** targets a specific question. You flagged it, or
 you answered it badly, and you want another go.
 
 A **competency-level priority** targets the underlying capability. The system
-creates these from evidence gaps — a pattern of missing decision ownership,
+creates these from evidence gaps, a pattern of missing decision ownership,
 say, across several answers that had nothing else in common.
 
 The rule that matters: completing a question retry may close the
@@ -33,7 +33,7 @@ priority.
 Answering it well the second time is evidence about the question. It isn't
 yet evidence about the skill.
 
-## Why competency practice uses a different question
+## Why does competency practice use a different question?
 
 When a competency priority feeds into a future session, it's allowed to
 select a *fresh* question rather than repeating the same wording.

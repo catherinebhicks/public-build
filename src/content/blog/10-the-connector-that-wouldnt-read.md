@@ -1,8 +1,8 @@
 ---
 title: The connector that wouldn't read
 summary: >-
-  An afternoon lost to a tool that kept failing, and the fix that wasn't a
-  fix to the tool at all.
+  An afternoon lost to a tool that kept failing, and a fix that had nothing to
+  do with the tool.
 project: ux-interview-coach
 tags: [tooling, dead-ends]
 draft: true
@@ -13,7 +13,8 @@ session went to a problem that produced no feature.
 
 The spec and the rubric live in Google Docs. I was working through the
 Google Drive connector to read and update them, and the reads started
-failing. Not on anything exotic — a basic document read, returning nothing.
+failing. Not on anything exotic, just a basic document read, returning
+nothing.
 
 The first useful thing that happened was a refusal. Rather than retry the
 write and hope, the work stopped:
@@ -27,15 +28,15 @@ current state of the thing you're about to overwrite, and a blind write into
 an unknown state is how you lose an afternoon of formatting instead of ten
 minutes of debugging.
 
-## The wrong diagnosis
+## What I thought was wrong
 
 My assumption was that the document was the problem. Something about that
 table, some formatting that had got into a bad state, maybe the edits we'd
 already made.
 
-It wasn't. Every attempt to work around it *at the document level* —
-different edits, different approaches to the same table — failed the same
-way, which should have been the clue earlier than it was. When every variant
+It wasn't. Every attempt to work around it *at the document level*, different
+edits and different approaches to the same table, failed the same way, which
+should have been the clue earlier than it was. When every variant
 of an operation fails identically, the variable you're changing isn't the
 one that matters.
 
@@ -43,10 +44,11 @@ one that matters.
 
 Stop reading the whole document. Read the table cells directly.
 
-That worked immediately. The failure wasn't Google Docs, and it wasn't the
-table — it was the *full document read*. Narrowing the operation to just the
-cells I needed sidestepped whatever was choking on the whole file, and the
-empty table got found and populated safely.
+That worked immediately, and I'll admit to being pleased about it after an
+afternoon of the other thing. The failure was the *full document read*, not Google
+Docs and not the table. Narrowing the operation to just the cells I needed
+sidestepped whatever was choking on the whole file, and the empty table got
+found and populated safely.
 
 ## What I took from it
 
@@ -62,6 +64,6 @@ Connectors have several routes to the same data and they don't fail together.
 **Refusing to write is a feature.** The instinct under friction is to force
 the thing through. Everything downstream of this project depends on documents
 I can't easily reconstruct, and "don't write into a state you can't read"
-is a rule I'd rather hold than relearn.
+is a rule worth holding rather than relearning.
 
 No feature shipped. Keeping it in anyway.

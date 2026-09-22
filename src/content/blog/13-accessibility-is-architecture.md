@@ -14,8 +14,8 @@ Partway through scoping, I interrupted the flow of questions:
 
 Later, asked to confirm it: **"That's a non-negotiable."**
 
-What I want to record isn't the commitment — I'd have made that regardless.
-It's what happened in the next sixty seconds.
+The commitment itself isn't the interesting part. I'd have made it regardless.
+What I want to record is what happened in the next 60 seconds.
 
 ## The question that followed
 
@@ -34,24 +34,23 @@ consistently fails them, and people who simply can't talk out loud right now.
 There's no overlay that fixes that. The alternative input either exists or the
 product excludes those users.
 
-So typed answers went into V1 scope — with the ability to switch modality
-mid-session — not as an accessibility feature bolted on, but because the
-commitment made it structural.
+So typed answers went into V1 scope, with the ability to switch modality
+mid-session, because the commitment made it structural rather than optional.
 
 And having built it, it turns out to be for everyone: people on a train, in an
 open-plan office, in a noisy room where transcription is going to be bad
 anyway. The usual curb-cut result. It was decided for disabled users and
 everyone gets it.
 
-## Why "polish" is the wrong category
+## So why isn't this polish?
 
 The reason this can't be retrofitted is that accessibility here isn't
 contrast ratios and alt text. It's interaction architecture:
 
 - **Timers** that announce themselves to screen readers without interrupting
   someone mid-answer
-- **Focus management** across live interview states — asking, listening,
-  evaluating, coaching
+- **Focus management** across the 4 live interview states: asking,
+  listening, evaluating, coaching
 - **Live status announcements** that convey "the interviewer is thinking"
   without visual-only cues
 - **Transcripts** and the interaction for correcting them
@@ -72,8 +71,8 @@ accessibility settings **during** a session, without restarting.
 Because people don't always know what they need before they start. You
 discover the interviewer is talking too fast in the middle of question two.
 Forcing a restart to fix that means losing the session as the price of
-noticing what you need — punishing the exact self-knowledge the product should
-be building.
+noticing what you need, which punishes the exact self-knowledge the product
+should be building.
 
 It's also, not incidentally, how accommodations work in a real interview. You
 can ask.
@@ -88,5 +87,4 @@ So: **automated WCAG 2.2 AA regression checks in CI, plus manual keyboard and
 screen-reader passes**, and accessible PDF requirements for the exported
 summary. Lightweight, but explicit and blocking.
 
-A non-negotiable that nothing tests is an intention. The test is what makes it
-a requirement.
+A non-negotiable that nothing tests is an intention.

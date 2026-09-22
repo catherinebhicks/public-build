@@ -20,7 +20,7 @@ short step away is:
 
 > You aren't influential.
 
-Those are completely different claims. The first is about four hundred words
+Those are completely different claims. The first is about 400 words
 someone said about one project. The second is about a person. A language model
 asked to give feedback will slide from the first to the second without
 anything in the machinery registering that something changed, because
@@ -31,7 +31,7 @@ employability, not intelligence, not personality, not potential.
 
 ## The dimensions
 
-Ten of them, extracted per answer:
+10 of them, extracted per answer:
 
 | Dimension | What it's looking for |
 |---|---|
@@ -46,8 +46,8 @@ Ten of them, extracted per answer:
 | Outcomes | What happened as a result? |
 | Reflection | What did they learn or understand afterward? |
 
-Each gets a **status** — observed, partial, missing, or not applicable — and,
-separately, a **strength** — low, medium, or high. Those answer two different
+Each gets a **status** (observed, partial, missing, or not applicable) and,
+separately, a **strength** (low, medium, or high). Those answer two different
 questions: is the evidence there at all, and how good is it? Collapsing them
 into one score was tempting and would have been wrong, because "you didn't
 mention the outcome" and "the outcome you mentioned was thin" call for
@@ -76,10 +76,10 @@ the presence of remaining schema gaps is not, on its own, a reason to probe.
 The schema exists to help the agent reason about what matters. The moment it
 becomes a form to be filled, the conversation stops being an interview.
 
-## Why I care about this one more than most
+## The people using this are already anxious
 
-Partly it's better product design — narrow claims are more defensible and more
-useful than broad ones. "This answer didn't say what you decided" is
+Partly it's better product design, since narrow claims are more defensible and
+more useful than broad ones. "This answer didn't say what you decided" is
 actionable. "You lack decisiveness" is just something to feel bad about.
 
 But mostly it's that the people using this are job hunting, which means
@@ -87,4 +87,4 @@ they're already anxious and already primed to read any critique as a verdict
 on their worth. A tool that hands out character assessments dressed as
 interview feedback would do real harm to people who came to it for help.
 
-Ten dimensions, tied to snippets, scoped to the question. Narrow on purpose.
+10 dimensions, tied to snippets, scoped to the question.

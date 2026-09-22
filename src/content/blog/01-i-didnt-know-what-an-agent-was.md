@@ -22,20 +22,20 @@ Here's the definition I got, and it's the one I've been using since.
 An agent is a system that takes a goal, breaks it into steps, uses tools when
 it needs them, and keeps track of context well enough to finish something
 over time. Structurally that's a planner, some memory, and connectors out to
-tools or APIs — wrapped in guardrails, behind an interface.
+tools or APIs, wrapped in guardrails, behind an interface.
 
-What struck me is how unglamorous that is. Four parts, none of them exotic.
-The distinguishing feature isn't intelligence, it's *persistence*: the thing
-holds a goal across turns instead of answering one question and forgetting
-you existed.
+What struck me is how unglamorous that is, and I liked it better for that.
+4 parts, none of them exotic. What makes it an agent is *persistence*: the
+thing holds a goal across turns instead of answering one question and
+forgetting you existed.
 
-## Why that shape fits
+## The problem turned out to be agent-shaped
 
 I have a large spreadsheet of UX interview questions and answers, built up
 over years of teaching. The questions are the kind Google and Amazon and
 companies like that actually ask.
 
-For a long time I thought of that spreadsheet as a content problem — get it
+For a long time I thought of that spreadsheet as a content problem, get it
 into a nicer format, publish it, done. But a question bank is only half of
 interview practice. The other half is the part a book can't do: someone
 listening to your answer, noticing what you left out, and asking the
@@ -51,11 +51,12 @@ Which is to say: I wanted an agent before I could define one, because the
 problem is agent-shaped. Practising for an interview is a conversation that
 accumulates.
 
-## The part I want to be honest about
+## Why am I building this?
 
-I'm building this as a portfolio piece. That's not a secondary motive I'm
-dressing up — it's the actual reason the project exists. I want to have built
-a real agent, end to end, rather than have opinions about agents.
+I'm building this as a portfolio piece. That is the actual reason the project
+exists, and saying so up front matters, because a portfolio motive hidden
+inside an engineering rationale quietly bends the engineering. I want to have
+built a real agent, end to end, rather than have opinions about agents.
 
 The risk in building for a portfolio is that you optimise for how the work
 *looks* rather than whether it works. I'd rather come out of this with

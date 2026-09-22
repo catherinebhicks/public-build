@@ -19,7 +19,7 @@ different stories and one generalised story can span several related projects.
 That's the data model. The reason it's in the decision log rather than buried
 in a schema is the rule attached to it.
 
-## Reuse is not a weakness
+## Is reusing a story a weakness?
 
 The spec says story reuse is allowed and is not inherently penalised. Breadth
 is contextual to the candidate's experience and seniority, and junior
@@ -41,7 +41,7 @@ answer-quality scoring.
 ## Canonical facts, session-specific telling
 
 The story model is deliberately hybrid. The canonical story keeps a stable
-core — what happened, versioned, editable. Each answer attempt separately
+core, what happened, versioned and editable. Each answer attempt separately
 records how the story was told *that time*: what evidence appeared, what was
 missing, how it was delivered.
 
@@ -54,8 +54,8 @@ than rewriting what's already there.
 ## Discovered quietly, surfaced later
 
 Stories get auto-detected during an interview. When one is found, it's added
-silently — nothing interrupts the conversation — and surfaced afterwards in
-the session report.
+silently, nothing interrupts the conversation, and surfaced afterwards in the
+session report.
 
 Matching uses multiple signals, not embeddings alone, and preserves a match
 confidence. An uncertain match is left unlinked rather than forced together.
@@ -69,7 +69,7 @@ is that right?" that belongs inside a mock interview.
 ## What this is really for
 
 Eventually: noticing that you claim a capability on your resume and have never
-once demonstrated it in practice. Or the reverse — something you demonstrate
+once demonstrated it in practice. Or the reverse, something you demonstrate
 repeatedly and have never put on paper.
 
 That comparison needs claimed capability and demonstrated evidence modelled

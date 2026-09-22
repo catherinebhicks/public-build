@@ -10,7 +10,7 @@ draft: true
 
 Shortest decision in the whole project.
 
-Trends over time were on the table — confidence, recurring weak areas, time to
+Trends over time were on the table: confidence, recurring weak areas, time to
 answer. I was unconvinced at first, then persuaded: those are useful, they're
 in.
 
@@ -21,14 +21,14 @@ Then the natural next question. Streaks?
 
 Done. No streaks, no points, no competitive framing.
 
-## Why it was that fast
+## Engagement mechanics versus someone's actual state
 
 Because the answer came from thinking about the user's actual state rather
 than from engagement mechanics.
 
 Gamification works by manufacturing a small, pleasant obligation. A streak
 counter creates a reason to come back that has nothing to do with whether
-coming back helps you — the reason is that the number would reset.
+coming back helps you. The reason is that the number would reset.
 
 That mechanic is designed for products competing for attention people don't
 especially want to give them. Someone practising for job interviews has the
@@ -52,8 +52,8 @@ it's worth being precise about why they're different.
 
 **Trends describe your practice.** Which evidence dimensions keep coming up
 missing, whether retries are getting stronger, where your confidence is low.
-That's diagnostic — it tells you what to work on next, and it's only
-meaningful because it's derived from work you actually did.
+That's diagnostic. It tells you what to work on next, and it's only meaningful
+because it's derived from work you actually did.
 
 **Streaks describe your compliance.** A streak doesn't know whether your
 practice was any good. It counts consecutive days. It's a metric about
@@ -61,7 +61,7 @@ obedience to the product's schedule, wearing the costume of a metric about
 progress.
 
 One helps you decide what to practise. The other helps the product retain you.
-When those two goals diverge — and they always eventually diverge — I'd rather
+When those two goals diverge, and they always eventually diverge, I'd rather
 the product have no mechanism that pulls toward retention.
 
 ## The general version

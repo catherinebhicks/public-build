@@ -1,16 +1,16 @@
 ---
 title: The portfolio goal changed the architecture
 summary: >-
-  One question — what does a real AI workflow look like in a portfolio? —
-  moved the whole system toward visible orchestration. A non-engineering
-  reason driving an engineering decision, recorded rather than hidden.
+  One question, what does a real AI workflow look like in a portfolio, moved
+  the whole system toward visible orchestration. A non-engineering reason
+  driving an engineering decision, recorded rather than hidden.
 project: ux-interview-coach
 tags: [architecture, portfolio, n8n]
 draft: true
 ---
 
 The architecture conversation started conventionally. Web app front end,
-normal backend calling the AI, n8n for background automation — not the live
+normal backend calling the AI, n8n for background automation but not the live
 interview flow.
 
 I asked why not the live flow. The concern was fragility: turning every live
@@ -23,7 +23,7 @@ Then I asked a question that wasn't about engineering at all:
 
 That changed the answer.
 
-## Why it changed it
+## Shipping fast, or showing the work
 
 If the goal is only to ship, the pragmatic architecture is code — one service,
 conventional control flow, whatever's fastest to build and easiest to
@@ -43,8 +43,7 @@ So: **n8n-heavy orchestration, with a thin coded application layer.**
 
 ## The seam
 
-The thin layer isn't decoration — it's the thing that keeps this from being a
-trap.
+The thin layer is what keeps this from being a trap.
 
 It handles the real-time UX, authentication, security boundaries, and session
 state. n8n orchestrates the AI work. The separation means the product doesn't
@@ -68,18 +67,18 @@ Two supporting rules fell out:
 
 Also: n8n orchestrates **discrete, inspectable modules** rather than
 containing one giant prompt. Question selection, evidence extraction,
-follow-up decision, coaching, synthesis — each with defined inputs and
+follow-up decision, coaching, synthesis, 5 modules with defined inputs and
 outputs. That's what makes the canvas legible instead of being a flowchart
 with one enormous box in the middle.
 
-## The part I want to be honest about
+## A non-engineering reason, named
 
 A non-engineering goal influenced a technical decision.
 
 That's usually either hidden or dressed up after the fact in purely technical
-language. I'd rather say it plainly: I chose the more visible architecture
-partly because I need to be able to show it, and I verified that choice
-wouldn't cost me anything structural before making it.
+language. Said plainly: I chose the more visible architecture partly because I
+need to be able to show it, and I verified that choice wouldn't cost me
+anything structural before making it.
 
 Optimising for explicability isn't automatically wrong, either. A system whose
 decisions you can inspect is easier to debug, easier to evaluate, and easier
@@ -102,9 +101,9 @@ Since they came from the same "modular so it can change" instinct:
 - **Different workloads, different models.** Live turn-by-turn prioritises
   latency and reliable structured decisions; end-of-session synthesis can
   trade latency for deeper reasoning. That's also an explicit cost control.
-- **Structured outputs, not prose.** Core AI operations return defined schemas
-  — live turn decision, story state, question selection, coaching, evidence,
-  feedback. Free-form text is hard to validate, persist, test, or orchestrate.
+- **Structured outputs, not prose.** Core AI operations return defined
+  schemas: live turn decision, story state, question selection, coaching,
+  evidence, feedback. Free-form text is hard to validate, persist, test, or orchestrate.
   Schemas turn probabilistic behaviour into something the application can
   reason about.
 

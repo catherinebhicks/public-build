@@ -2,7 +2,7 @@
 title: Personalising your interview isn't consent to train on it
 summary: >-
   I asked what we'd actually give up by not training on user data. The answer
-  made the decision easy — and separated two things that look like one.
+  made the decision easy, and separated two things that look like one.
 project: ux-interview-coach
 tags: [privacy, consent, product-decisions]
 draft: true
@@ -13,10 +13,10 @@ When privacy came up, my first instinct was simple:
 > I just want users to know we're not training on their data. That's the only
 > thing I want to make sure they know.
 
-Then I asked the more useful question — what do we actually *get* from
+Then I asked the more useful question. What do we actually *get* from
 training on their data, and what do we miss out on by not?
 
-## The answer
+## So what would we actually give up?
 
 Almost nothing, for this product.
 
@@ -27,7 +27,7 @@ data *for them*, during their session. None of it requires their transcripts
 to end up in a training corpus.
 
 What you give up is the "thousands of real interviews make our model smarter"
-story. Which, for V1, is a story — not a capability. There's no model being
+story, which for V1 is a story rather than a capability. There's no model being
 trained here. There's a general-purpose model being prompted with a rubric and
 a question bank.
 
@@ -46,7 +46,7 @@ project, because it separates two things that look identical from the outside.
 
 Both involve uploading a resume. Both involve the system reading it. From the
 user's side, the same action. But they're different purposes with different
-beneficiaries, and collapsing them is how consent gets manufactured — you
+beneficiaries, and collapsing them is how consent gets manufactured. You
 accept "help me practise" and unknowingly also accept "and become training
 data."
 
@@ -56,19 +56,20 @@ second.
 
 ## What that means for uploads
 
-Personalisation is progressive and entirely optional — generic questions are
-always available. Nothing is required.
+Personalisation is progressive and entirely optional, and generic questions
+are always available. Nothing is required. Five inputs, and you can skip all
+of them.
 
-- **Job description** — optional. Used to *weight* question selection, never
+- **Job description**: optional. Used to *weight* question selection, never
   to hard-filter it. Real interviews contain unexpected questions; a system
   that only asks JD-derived questions builds false confidence.
-- **Resume** — optional, and **session-only by default**. It persists only if
+- **Resume**: optional, and **session-only by default**. It persists only if
   you explicitly choose to save it, because a resume carries far more personal
   information than the system needs to keep just because it was useful once.
-- **LinkedIn URL** — optional, and reasonably storable, since it's a
+- **LinkedIn URL**: optional, and reasonably storable, since it's a
   public-facing page rather than a private document. Still user-controlled.
-- **Company info** — looked up, then **confirmed by you** before use.
-- **Portfolio** — cut. Discussing a project and evaluating a visual portfolio
+- **Company info**: looked up, then **confirmed by you** before use.
+- **Portfolio**: cut. Discussing a project and evaluating a visual portfolio
   are different tasks needing different inputs. That's a different tool.
 
 The company-confirmation step exists because an incorrect assumption at setup
@@ -82,8 +83,8 @@ and you can edit it directly. The edited version wins.
 
 ## Consent as history
 
-One structural decision that follows. Consent isn't a boolean — it's an
-**append-only event log**.
+One structural decision that follows. Consent is an **append-only event
+log** rather than a boolean.
 
 A single true/false can't answer the questions that matter if anyone ever
 asks: what did they agree to, what policy language did they see, where were

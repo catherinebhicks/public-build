@@ -18,7 +18,7 @@ quarantine before the purge begins.
 Both of those are in the same decision, and reconciling them honestly is the
 whole problem.
 
-## Why the window exists at all
+## Why does the window exist at all?
 
 Catastrophic accidental deletion. Someone confirms a dialog they didn't read
 and destroys a year of practice history. Every system that has ever offered
@@ -27,7 +27,7 @@ permanent deletion has fielded that email.
 Eight hours is a safety buffer for exactly that case. After it, the purge
 starts and there is no application-level recovery.
 
-## Why it isn't an undo
+## So why isn't it an undo?
 
 The constraint attached to the decision: the UI must not imply a normal undo
 after calling deletion permanent, and quarantined content cannot remain
@@ -43,8 +43,8 @@ exception rather than the flow.
 
 That distinction is doing real work. The moment a recovery window becomes a
 visible feature, it stops being a safety net and becomes a retention
-mechanic — the thing where cancelling takes four screens and your data hangs
-around for thirty days in case you reconsider.
+mechanic, the thing where cancelling takes 4 screens and your data hangs
+around for 30 days in case you reconsider.
 
 ## What survives
 
@@ -52,9 +52,9 @@ After the purge: a minimal, content-free tombstone. Enough to prove the
 deletion happened, and nothing else. No ghost copies of transcripts sitting
 in a table nobody remembers.
 
-Deleting a single session cascades too — questions, attempts, transcripts,
-evidence, conversation context, decision events, confidence records, report
-versions. The cascade is specified rather than assumed, because the thing
+Deleting a single session cascades too, across questions, attempts,
+transcripts, evidence, conversation context, decision events, confidence
+records and report versions. The cascade is specified rather than assumed, because the thing
 that goes wrong here is never the main table.
 
 Backups age out under the retention policy, and there's a separate rule that
@@ -62,10 +62,10 @@ deleted content must not be restored into active state by a backup restore.
 That's the bug nobody catches until it happens: the data was deleted
 correctly, and then a restore brought it back.
 
-## The reason this is a post
+## Why write this one down?
 
 Because "permanently deleted" is one of the most routinely dishonest phrases
 in software, and the honest version is slightly less impressive.
 
-I'd rather write down the eight hours where anyone can read it than ship a
+Better to write down the eight hours where anyone can read it than to ship a
 sentence that's cleaner than the system.

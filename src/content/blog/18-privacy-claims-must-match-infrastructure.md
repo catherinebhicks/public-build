@@ -8,8 +8,8 @@ tags: [privacy, vendors, compliance]
 draft: true
 ---
 
-Once retention periods were on the table — raw audio deleted after
-transcription, telemetry ninety days, backups aging out at thirty — I asked
+Once retention periods were on the table, raw audio deleted after
+transcription, telemetry at 90 days, backups aging out at 30, I asked
 the obvious question. Does that meet GDPR?
 
 The answer was more useful than a yes:
@@ -43,9 +43,9 @@ This is easy to get wrong sincerely. You read the vendor's privacy page, you
 believe it, you write the reassuring sentence. The gap opens because the
 capability exists on an enterprise tier and you're on the free one.
 
-## The processor review
+## Six vendors, and what each one gets
 
-So every vendor that touches user data got reviewed — what it receives, for
+So all 6 vendors that touch user data got reviewed: what each receives, for
 what purpose, for how long. None came back as an automatic no. None came back
 as approved either. They came back **conditional**:
 
@@ -53,14 +53,14 @@ as approved either. They came back **conditional**:
 |---|---|---|
 | **AssemblyAI** | Raw audio, for transcription | Paid account, training opt-out confirmed, streaming zero-retention actually enabled |
 | **OpenAI** | Transcript text + interview context | Likely approvable if zero data retention is contractually enabled |
-| **ElevenLabs** | Generated coach text only — never candidate audio | Only with zero-retention on an enterprise plan. **Otherwise blocked** — pick another TTS |
+| **ElevenLabs** | Generated coach text only, never candidate audio | Only with zero-retention on an enterprise plan. **Otherwise blocked**, pick another TTS |
 | **n8n** | Minimal payloads, orchestration only | Strict retention and feature limits. No durable storage |
 | **Supabase** | System of record | Region pinning, DPA, no content logging |
 | **Vercel** | Hosts the app | No intentional transcript storage |
 
 The ElevenLabs row is the one that matters most, because it's the one where
-the answer might be no. Having a named alternative path — block it, choose a
-different TTS — is what stops the decision being made later under deadline
+the answer might be no. Having a named alternative path, block it and choose a
+different TTS, is what stops the decision being made later under deadline
 pressure, when the honest answer is inconvenient.
 
 Note what ElevenLabs *doesn't* get: the candidate's voice. Only the coach's
@@ -77,16 +77,16 @@ explicitly, cascading across derived artifacts, with tombstones and downstream
 reconciliation.
 
 **Don't resurrect deleted users from backups.** This is the one that genuinely
-surprised me. Restore a thirty-day-old backup after an incident and you can
-silently reinstate records a user deliberately deleted three weeks ago. They
+surprised me. Restore a 30-day-old backup after an incident and you can
+silently reinstate records a user deliberately deleted 3 weeks ago. They
 asked you to forget them; your disaster recovery remembered.
 
 So deletion tombstones have to survive a restore, or be reapplied after one.
-It's an operational procedure, not a feature — and it's exactly the kind of
-thing that gets discovered during an incident rather than during design, which
-is why it's written down now.
+It's an operational procedure rather than a feature, and it's exactly the kind
+of thing that gets discovered during an incident rather than during design,
+which is why it's written down now.
 
-## Why bother, on a portfolio project
+## One user, who is also the developer
 
 Because privacy promises are the part of a product where the gap between
 *what we said* and *what the system does* causes real harm to real people, and

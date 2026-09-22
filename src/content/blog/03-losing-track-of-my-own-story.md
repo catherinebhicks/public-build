@@ -2,7 +2,7 @@
 title: I lost track of my own story
 summary: >-
   I tested the interview loop on a project I know inside out, and couldn't
-  remember what I'd already said. That produced a feature — and then a second
+  remember what I'd already said. That produced a feature, and then a second
   mode, because the feature would have ruined a mock interview.
 project: ux-interview-coach
 tags: [modes, product-decisions]
@@ -10,7 +10,7 @@ draft: true
 ---
 
 I was testing the interview loop on myself. The question was "tell me about a
-project you're proud of," and I picked my eBay work — the first senior-level
+project you're proud of," and I picked my eBay work, the first senior-level
 project I did, back when I was still a mid-level designer doing senior-level
 work. I know it inside out and upside down.
 
@@ -27,10 +27,11 @@ see what you've built so far.
 
 ## The feature
 
-So the agent maintains a **running story** — a structured record of the
-candidate's emerging answer. Not a transcript. A model of the evidence:
-context, ownership, decisions, reasoning, trade-offs, collaboration,
-influence, execution, outcomes, reflection, and what's still missing.
+So the agent maintains a **running story**, a structured record of the
+candidate's emerging answer. Not a transcript. A model of the evidence across
+10 dimensions: context, ownership, decisions, reasoning, trade-offs,
+collaboration, influence, execution, outcomes and reflection, plus what's
+still missing from each.
 
 It's built from what the candidate actually said, with every item traceable
 back to the turn it came from. It reflects; it does not rewrite. The moment
@@ -43,14 +44,14 @@ Context for question one shows up in the middle of question three. A system
 that treats each answer as isolated text can't notice that the gap it was
 about to probe was already filled.
 
-## And then the problem
+## So why not just show it to them?
 
 Showing someone their running story mid-interview is enormously helpful. It's
 also completely unrealistic.
 
 No interviewer hands you a live summary of how your answer is landing. A
 product that did that in a mock interview would be training you for a
-situation that will never happen — and the whole point of a mock is to
+situation that will never happen, and the whole point of a mock is to
 rehearse the real conditions, including the discomfort of not knowing how
 you're doing.
 
@@ -65,7 +66,7 @@ mediocre learning tool *and* an unconvincing simulation.
 story, it stops when you're stuck and switches to coaching, it lets you retry.
 
 **Mock Mode** prioritises realism. Follow-ups look like an interviewer's
-follow-ups. The story model keeps building — silently — and is revealed with
+follow-ups. The story model keeps building silently, and is revealed with
 the feedback at the end. No hints, no scaffolding, no visible machinery.
 
 The thing I want to flag, because it's the part that's easy to get wrong: **mode

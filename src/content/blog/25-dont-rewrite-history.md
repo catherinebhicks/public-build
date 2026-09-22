@@ -27,8 +27,8 @@ rubric and calibration version, and the workflow configuration version it ran
 under. The output itself is never mutated.
 
 When better logic exists, it produces a **versioned reinterpretation** that
-points back at the same underlying evidence and at the original evaluation —
-a new reading, stored alongside, not replacing.
+points back at the same underlying evidence and at the original evaluation. A
+new reading, stored alongside, rather than a replacement.
 
 So you can ask two different questions. What did the coach tell me in March?
 And: what would it say about that same answer now? Both have answers. If the
@@ -49,8 +49,8 @@ different conclusion from the same material.
 
 This is the part that took the longest to get right.
 
-If you correct something during a session — the coach misheard you, or the
-resume extraction got your role wrong — that correction is durable and should
+If you correct something during a session, the coach misheard you or the
+resume extraction got your role wrong, that correction is durable and should
 absolutely affect your future sessions. It gets promoted into a new version of
 your saved context, with a record of where it came from.
 
@@ -60,25 +60,23 @@ it actually used.
 
 The rule in the spec: never back-write historical reports or session context.
 
-## Why I'd defend this even though it's more work
+## What happens if the past can change
 
 Because the alternative is a product whose past changes when you aren't
 looking.
 
 You go back to a report you found useful, and it's different. Not obviously
-different — subtly, in ways you can't quite place, because the model improved.
+different. Subtly, in ways you can't quite place, because the model improved.
 Now you don't know whether you misremembered or the system changed under you,
 and there's no way to find out.
 
 That's a small betrayal, and it's the kind that accumulates. A coaching
-product asks people to trust an assessment of their own work. The minimum
-that trust requires is that the assessment stays put.
+product asks people to trust an assessment of their own work.
 
-## What it costs
+## The storage bill, and the harder part
 
 Storage, and the loss of a shortcut. Every comparison across time has to
 identify which interpretation version it's using, so "you've improved" becomes
-a claim you have to qualify — improved under which rubric?
+a claim you have to qualify. Improved under which rubric?
 
-That's genuinely harder to build, and it's harder to display. It's also the
-only version where the improvement claim means anything.
+That's genuinely harder to build, and it's harder to display.

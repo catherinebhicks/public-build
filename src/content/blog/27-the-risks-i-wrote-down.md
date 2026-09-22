@@ -9,8 +9,8 @@ tags: [planning, process, honesty]
 draft: true
 ---
 
-There's now a risks section. Eight entries, each with a trigger — the thing
-that would tell me the risk has arrived — and a mitigation.
+There's now a risks section. 8 entries, each with a trigger, the thing
+that would tell me the risk has arrived, and a mitigation.
 
 The trigger is the part that makes it more than a worry list. A risk without
 one is just anxiety in a bulleted format; you can hold it indefinitely
@@ -22,7 +22,7 @@ Some of them are uncomfortable to have written down.
 ## The question bank is too thin
 
 First on the list. The source workbook lacks most of the fields the agent
-needs — competencies, expected evidence, seniority modifiers, follow-up
+needs: competencies, expected evidence, seniority modifiers, follow-up
 triggers.
 
 Trigger: a full session can't be assembled at one seniority level without
@@ -51,13 +51,13 @@ act on.
 Every turn goes through an orchestration round trip plus transcription plus
 inference plus speech synthesis. Trigger: time-to-first-audio beyond the
 budget. Mitigation: set the budget before building, and keep the option of
-moving the live loop into application code — which the architecture already
+moving the live loop into application code, which the architecture already
 anticipates, because I expected this one.
 
 ## People get evaluated worse for their accent
 
 Transcription accuracy varies by accent, dialect, and disfluency. Those errors
-don't stop at the transcript — they flow into evidence extraction, which means
+don't stop at the transcript. They flow into evidence extraction, which means
 a candidate can be assessed as having said less than they said.
 
 Trigger: measurable accuracy differences across speaker groups in the
@@ -92,7 +92,7 @@ recorded rather than things being silently dropped.
 That's the entry I'd most like to have left out. It's the most obviously true
 one.
 
-## The assumptions underneath
+## What am I assuming?
 
 There's a shorter list of things currently taken as true and worth revisiting
 if any turns out false: that the workbook is usable as V1 content and its
@@ -102,6 +102,6 @@ satisfies the accessibility requirement so voice can stay optional, and that
 the model tier stays available and priced as assumed.
 
 Any one of those going wrong changes the shape of the product rather than the
-schedule. Which is why they're listed separately from the risks — a risk is
+schedule. Which is why they're listed separately from the risks. A risk is
 something that might happen to the plan, and an assumption is something the
 plan is standing on.
