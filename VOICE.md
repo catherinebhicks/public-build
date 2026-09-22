@@ -241,16 +241,79 @@ write it. (The AI-drafted blog copy measured 10.2.)
 - **Parenthetical dark humour.** *"(SSI intake - let the madness begin)..."*
 - **Typos run highest here** and are never corrected.
 
-### Which register the build log wants
+## Part four: formal vs informal (added 2026-09-22)
 
-**Professional, at the studio pitches' length.** Take the "Hey [Name]"
-directness, the unprompted offers of help, the exclamation marks, the
-hedge-before-claim order, the numerals.
+Second, wider pass: 141 sent messages sorted on both axes at once. ~1,900
+words of email. Formal/informal turns out to be the stronger axis — it
+changes more about how a sentence is built than personal/professional does.
 
-From the personal register take **only the bluntness**, and only about
-something that genuinely annoyed her. *"What an absolute bummer"* belongs in a
-build log; *"This is ridiculous"* does not. The question-as-statement tic is
-personal-only — it reads as impatience.
+| Per 1,000 words | Prof · formal | Prof · informal | Pers · formal | Pers · informal |
+|---|---|---|---|---|
+| Words sampled | 442 | 721 | 348 | 399 |
+| **Em dashes** | **0** | **0** | **0** | **0** |
+| Digits | 13.6 | 4.2 | **20.1** | **0** |
+| Exclamation marks | **0** | 11.1 | 2.9 | **12.5** |
+| Idiomatic verbs | 4.5 | **22.2** | 2.9 | 12.5 |
+| "Hey" openers | 1 | **8** | 0 | 2 |
+| Questions as statements | 0 | 1 | 1 | **4** |
+
+### Zero em dashes in all four cells
+
+Four registers, ~1,900 words of email plus 3,602 words of case study, and not
+one em dash. Nothing else here is that consistent. Em dashes in something
+attributed to her means she didn't write it, or something else edited it.
+
+### Numbers and exclamation marks trade off, almost perfectly
+
+Formal carries the count and none of the warmth (prof-formal: 13.6 digits,
+**0** exclamation marks). Informal reverses it (pers-informal: **0** digits,
+12.5 exclamation marks).
+
+The two registers argue differently. Formal: the count *is* the argument —
+*"The 10 lines on this form are not going to be enough to give you 5 years of
+work history." "I have done 6 0-1 product builds, and 5 of those have been as
+the founding designer."* Informal: warmth does the work, numbers vanish.
+
+### Informal markers
+
+- **"Hey [Name]" on its own line, no comma** — 8 of 9 instances are informal.
+- **Idiomatic verbs at 5x the formal rate**: pop up, hop in, holler, real
+  quick, throw together, circle back, knock it off, get in there, crashing
+  out, once over, runthrough, go forth, what an absolute bummer.
+- **Dropped subjects and fragments**: *"Had a conflict come up."*
+- **The dotted trail-off** — informal only.
+- **Typos left in**: THey, Im, Its, remode, Coloradol.
+
+### Formal markers
+
+- **Opens on the situation, not a greeting**, and states the ask at the end:
+  *"Please advise how you would like me to proceed." "You can remove me from
+  your list."*
+- **Subject restored, sentences complete**: *"I've given the process careful
+  thought and would like to respectfully decline participating."*
+- **Anger is cold, not hot.** Never "this is ridiculous" — instead *"I assume
+  since you have canceled on me last minute twice and not followed up to
+  rebook again in over 2 weeks that you have no interest in working with me
+  moving forward."* One long sentence, evidence counted out, conclusion
+  offered as an assumption they're invited to correct. Her most distinctive
+  formal move.
+- **Typos survive here too** (*Financial Plannern*, *an disability*).
+  Formality changes sentence construction, not proofreading.
+
+### Where the build log sits
+
+**Professional-informal for voice, professional-formal for backbone.** The
+"Hey"-level directness, idiomatic verbs, exclamation marks and offers of help
+from the informal cell; the digit density from the formal one.
+
+That combination doesn't occur in her email, because email is short and picks
+one mode. The studio pitches do it: NetBase runs 14.9 digits per 1,000 in a
+document that also says *"I had the privilege"* and *"both exciting and
+challenging."* Long-form is where both registers coexist.
+
+**Caution:** Kelly Moore runs 4.8 digits against NetBase's 14.9. Formality
+doesn't guarantee numbers — the subject does. NetBase was a data-reduction
+project, so counts were the story. Don't manufacture figures to hit a rate.
 
 ### Still outstanding on the drafts
 
