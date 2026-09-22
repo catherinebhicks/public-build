@@ -184,6 +184,63 @@ structure constantly.
 - **Typos and inconsistent capitalisation survive to final PDF.** Not a thing
   to imitate, but a reminder that a spotless surface is not her surface.
 
+## Part three: unedited email (added 2026-09-22)
+
+The studio pitches are written prose, edited for a client. Sent email is
+written once and never revised, so the habits show more clearly. ~440 words
+read from late 2024 across client, scheduling and administrative threads.
+
+| Per 1,000 words | Her email | Her PDFs | The drafts (now) |
+|---|---|---|---|
+| Em dashes | **0.0** | **0.0** | 0.25 |
+| Digits | **16.0** | 10.8 | 3.6 |
+| Exclamation marks | 6.8 | 0.8 | 0.0 |
+
+**Zero em dashes across 4,041 words of her writing, in two registers.** Where
+a dash would go she uses a spaced hyphen — *"didn't address the menu at
+smaller breakpoints - might want to have whoever is working on your website
+get in and address that"* — or starts a new line.
+
+**The dotted trail-off is her most distinctive habit.** *"No problem ... this
+is a fantastic v2."* *"I'll get in there and fix it for you real quick.. but
+if she designed that beautiful new site…"* Two dots or three, spaced or not,
+where most writers would use a comma or a full stop. No model produces this.
+
+**She leads with the hedge, then the claim.** Sentences open *"Looks like…"*,
+*"My guess is…"*, *"it seems to…"*. Generated prose states the conclusion at
+full confidence and supports it after.
+
+**Her verbs are idiomatic.** Hop in, holler, get in there, take another once
+over, pop back in, real quick. Generated copy reaches for *address, ensure,
+leverage, facilitate*.
+
+**Terminal punctuation is optional.** Messages end with no full stop. One
+question ends in a period: *"How would you like me to proceed."*
+
+### The subject-dropping rule needs a caveat
+
+Pattern 8 in the rules doc treats dropped subjects as a machine tell. That
+holds only for the clipped résumé register (*"Co-lead on design — flows and
+UI patterns"*). Her email drops subjects constantly and reads entirely human:
+*"Had a conflict come up." "Glad to hop in." "Might want to have whoever is
+working on your website get in and address that."*
+
+The difference is register, not grammar. Hers is speech, with a contraction
+and a casual verb. Don't restore a subject just because one is missing.
+
+### What this changes for the drafts
+
+Three things the 2026-09-22 edit pass did not do, now that the email sample
+exists:
+
+1. **Digits are still 4x too low** (3.6 vs her 16.0 in email). Every "several"
+   and "a lot" that has a real number behind it should carry the numeral.
+2. **No exclamation marks anywhere in 15,725 words.** Hers run at 6.8 per
+   1,000 in email, 0.8 in written prose. Even at the written-prose rate the
+   drafts should have a dozen. Currently zero.
+3. **No dotted trail-offs.** A handful, used where a sentence genuinely tails
+   off, would do more for authenticity than any other single edit.
+
 ## How to work the list
 
 Per post, in order, roughly fifteen minutes each:
