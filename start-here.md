@@ -14,9 +14,9 @@ First project documented: the **UX Interview Coach Agent** — an agentic
 interview-practice product for UX/product designers. "A coach, not an answer
 bank."
 
-**Status (2026-09-22):** site is live and deployed. 39 post files, all
+**Status (2026-09-22):** site is live and deployed. 45 post files, all
 still drafts and none dated — a backlog, not a schedule. Nothing has
-published yet. 27 are written; 12 are placeholders waiting on open spec
+published yet. 27 are written; 18 are placeholders waiting on open spec
 sections.
 
 ## Where Things Live
@@ -45,7 +45,7 @@ DNS for `catherinehicks.com` is at **GoDaddy**. Needed only at cutover.
 frontmatter, MDX, RSS, sitemap, `projects` as a first-class dimension,
 WCAG 2.2 AA groundwork (skip link, landmarks, focus states, AA contrast in
 both themes), GitHub Pages deploy, Figma-derived design system (Space Grotesk
-+ Inter, self-hosted), 27 drafts written and numbered, 12 placeholders
++ Inter, self-hosted), 27 drafts written and numbered, 18 placeholders
 stubbed.
 
 **In progress:** Catherine editing the drafts. They are in Claude's voice,
@@ -122,7 +122,7 @@ fails the build with a message naming the file. Posts have no date, so the
 index sorts on the `NN-` prefix and the RSS feed carries no `pubDate` —
 readers fall back to feed order.
 
-**Placeholder posts** (`28`–`39`) are tagged `placeholder` and open with a
+**Placeholder posts** (`28`–`45`) are tagged `placeholder` and open with a
 blockquote saying so. Each names the spec sections it's waiting on and the
 questions it would have to answer. They exist so the content has somewhere
 to land — fill one in when its source section is decided, and drop the
