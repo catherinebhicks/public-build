@@ -77,4 +77,4 @@ root-relative specifically so that move is a config change instead of a
 rebuild.
 
 If you're setting up something similar and want the config, holler and I'll
-send it over. It's about 40 lines and most of that is the sitemap.
+send it over! It's about 40 lines and most of that is the sitemap.

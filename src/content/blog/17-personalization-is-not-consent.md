@@ -98,3 +98,7 @@ consent.** Some processing is necessary to provide the service at all.
 Presenting that as a choice you could decline while still using the feature is
 a lie with a checkbox on it. Consent is reserved for genuinely optional
 persistence and secondary use.
+
+If you've drawn this line somewhere different in a product that takes uploads,
+tell me where! I'd like a second opinion on it before it's built rather than
+after.

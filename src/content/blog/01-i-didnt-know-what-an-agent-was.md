@@ -67,4 +67,4 @@ So the log starts here, at not knowing what the word meant.
 
 If you've been
 nodding along in agent conversations without being able to define one either,
-holler. I'd genuinely like to know I'm not the only one.
+holler! I'd genuinely like to know I'm not the only one.

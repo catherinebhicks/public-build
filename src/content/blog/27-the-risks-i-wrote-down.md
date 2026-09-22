@@ -105,3 +105,6 @@ Any one of those going wrong changes the shape of the product rather than the
 schedule. Which is why they're listed separately from the risks. A risk is
 something that might happen to the plan, and an assumption is something the
 plan is standing on.
+
+If you've shipped something this size solo and it actually worked, holler! I'd
+like to know what you cut.

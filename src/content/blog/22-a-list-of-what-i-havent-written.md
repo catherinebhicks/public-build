@@ -83,3 +83,6 @@ This makes the document look worse. A reader flipping through sees TBD
 
 I think that's an accurate impression and worth having. The alternative is a
 document that looks finished, which would be a lie told mostly to myself.
+
+If there's a section in here I haven't thought of, tell me! The list of gaps
+is the part I most want to be wrong about.

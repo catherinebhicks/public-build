@@ -90,6 +90,6 @@ summary. Lightweight, but explicit and blocking.
 
 A non-negotiable that nothing tests is an intention.
 
-If you've retrofitted AA onto a live interview or voice product, I'd really
-like to hear how it went. I'd rather learn the expensive parts from someone
-else's build than my own.
+If you've retrofitted AA onto a live interview or voice product, holler! I'd
+really like to hear how it went, and learning the expensive parts from someone
+else's build beats learning them from my own.

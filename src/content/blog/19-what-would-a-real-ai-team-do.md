@@ -133,4 +133,4 @@ None of it is built yet. Writing the plan publicly means that if I cut it
 later, the cut is visible instead of quiet.
 
 If you run an eval set on a coaching or feedback product, I'd love to see how
-you scored the soft dimensions. That's the part I'm least sure about.
+you scored the soft dimensions! That's the part I'm least sure about.

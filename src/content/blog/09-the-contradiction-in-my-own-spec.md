@@ -104,3 +104,7 @@ the worse product. Worth keeping the record of that.
 **Revisit if:** user research shows a genuine need for examples as a teaching
 aid. Even then they'd have to be clearly separated from the candidate's own
 answer, not offered as a substitute for it.
+
+If you've caught a contradiction like this in your own spec, I'd love to know
+how long it sat there before anyone spotted it! I suspect days is on the
+short side.

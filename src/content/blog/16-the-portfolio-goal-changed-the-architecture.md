@@ -110,5 +110,5 @@ Since they came from the same "modular so it can change" instinct:
 The common thread: assume every piece will be replaced, and put the seams in
 while it's cheap.
 
-If you've run a live agent loop through n8n and hit the latency wall, holler.
-I'd rather find out where it breaks from you than from my own users.
+If you've run a live agent loop through n8n and hit the latency wall, holler!
+Finding out where it breaks from you beats finding out from my own users.

@@ -88,3 +88,7 @@ on their worth. A tool that hands out character assessments dressed as
 interview feedback would do real harm to people who came to it for help.
 
 10 dimensions, tied to snippets, scoped to the question.
+
+If you teach or coach and you've landed on language that names a gap without
+it reading as a verdict, send it my way! That's the hardest sentence in this
+whole product to get right.
