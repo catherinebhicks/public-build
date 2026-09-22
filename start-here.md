@@ -14,8 +14,9 @@ First project documented: the **UX Interview Coach Agent** — an agentic
 interview-practice product for UX/product designers. "A coach, not an answer
 bank."
 
-**Status (2026-09-21):** site is live and deployed. 19 posts written and
-scheduled, all still drafts. Nothing has published yet.
+**Status (2026-09-21):** site is live and deployed. 19 posts written, all
+still drafts and all undated — a backlog, not a schedule. Nothing has
+published yet.
 
 ## Where Things Live
 
@@ -28,7 +29,7 @@ scheduled, all still drafts. Nothing has published yet.
 | Posts | `src/content/blog/NN-<slug>.md` |
 | Projects | `src/content/projects/<slug>.md` |
 | Cutover plan | `docs/CUTOVER.md` |
-| UX Interview Coach PRD + spec | Google Drive folder `1KS3MYGSPqF1YLW7MtKVA3iQYF4PpUkSX` |
+| UX Interview Coach source docs | Google Drive folder `1KS3MYGSPqF1YLW7MtKVA3iQYF4PpUkSX` — one copy each of the [PRD](https://docs.google.com/document/d/1rwbe4rhssLFB0Hsirhp-Wdbl4AQ04QhOqIQutHX3Dz8/edit), [Technical Spec](https://docs.google.com/document/d/1X7240cd060De5qQJPHISRtFb3nvMxZ0lfKsNo488Ot4/edit) and [Decision Rationale](https://docs.google.com/document/d/1loujwhL4OZHohbcFD4eFwuwy3w216JEu9Vv25bIJQVk/edit), carrying **39 unresolved review comments** (see #13) |
 
 ## Credentials & Access Needed
 
@@ -43,21 +44,28 @@ DNS for `catherinehicks.com` is at **GoDaddy**. Needed only at cutover.
 frontmatter, MDX, RSS, sitemap, `projects` as a first-class dimension,
 WCAG 2.2 AA groundwork (skip link, landmarks, focus states, AA contrast in
 both themes), GitHub Pages deploy, Figma-derived design system (Space Grotesk
-+ Inter, self-hosted), 19 drafts written/numbered/scheduled.
++ Inter, self-hosted), 19 drafts written and numbered.
 
 **In progress:** Catherine editing the drafts. They are in Claude's voice,
 not hers — editing is the gate.
 
-**Next:** post 01 publishes Mon 2026-09-21. Cadence **Mon/Wed/Fri**, running
-through Mon 2026-11-02, then build-phase posts take over.
+**Next:** publish posts one at a time as each is edited. **No cadence is
+committed to** — the original Mon/Wed/Fri pre-dating was removed on
+2026-09-21 because it assumed the posts would publish in written order.
+A post gets its date at the moment it publishes.
 
 ## Immediate Next Steps
 
 1. **Edit and publish post 01** (`01-i-didnt-know-what-an-agent-was.md`) —
-   change `draft: true` to `draft: false`, commit, push.
-2. **Run `fix-prd.gs`** against the UX Interview Coach PRD (Extensions → Apps
-   Script → paste → `checkPRD()` then `fixPRD()`). Fixes three defects. A
-   backup doc already exists in the same Drive folder.
+   edit it, add `date: YYYY-MM-DD`, change `draft: true` to `draft: false`,
+   commit, push. The date is required to publish; the build refuses without
+   it.
+2. **Rewrite post 09** before it publishes (#12). It claims the
+   example-answer contradiction was caught and fixed. It is still live in
+   PRD §8 and §32, and her own Drive comments flag it as blocking.
+3. **Work the 39 review comments** on the three Drive docs (#13) — PRD 20,
+   Technical Spec 17, Decision Rationale 2, all unresolved. Several are
+   strong material for build-phase posts.
 3. **Install a Markdown editor** — Setapp has iA Writer / Ulysses. No code
    editor is currently installed; `github.dev` (press `.` on the repo) works
    with zero setup in the meantime.
@@ -96,7 +104,6 @@ through Mon 2026-11-02, then build-phase posts take over.
 ```yaml
 ---
 title: A post title
-date: 2026-09-23
 summary: One or two sentences — shows on the index and in RSS.
 project: ux-interview-coach
 tags: [tooling]
@@ -104,8 +111,20 @@ draft: true
 ---
 ```
 
+**No `date:` while it's a draft.** Add one only when publishing:
+
+```yaml
+date: 2026-09-23
+draft: false
+```
+
 `npm run dev` → http://localhost:4321/public-build/ (drafts visible locally
-only). Frontmatter is schema-checked; a bad date fails the build.
+only, and they sort to the top since they're the work in progress).
+
+Frontmatter is schema-checked. `date` is optional, but a zod `.refine` in
+`src/content.config.ts` **requires** it once `draft: false` — so a post can
+never publish undated. The build fails with a message naming the file.
+Undated posts are also excluded from RSS, where `pubDate` is required.
 
 ## Where Tasks Are Tracked
 
