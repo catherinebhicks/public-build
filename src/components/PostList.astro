@@ -1,5 +1,5 @@
 ---
-import { formatDate, isoDate, type Post } from '../lib/content';
+import { type Post } from '../lib/content';
 import { url } from '../lib/url';
 
 interface Props {
@@ -15,22 +15,19 @@ const { posts, showProject = false, projectNames = {} } = Astro.props;
   {posts.map((post) => (
     <li>
       <h2><a href={url(`/posts/${post.id}/`)}>{post.data.title}</a></h2>
-      <p class="meta">
-        {/* An undated post has no date to lead with, so the Draft badge
-            takes that slot. Separators follow the first item, never open. */}
-        {post.data.date
-          ? <time datetime={isoDate(post.data.date)}>{formatDate(post.data.date)}</time>
-          : <strong>Draft</strong>}
-        {showProject && post.data.project && (
-          <>
-            {' · '}
-            <a href={url(`/projects/${post.data.project}/`)}>
-              {projectNames[post.data.project] ?? post.data.project}
-            </a>
-          </>
-        )}
-        {post.data.date && post.data.draft && <> · <strong>Draft</strong></>}
-      </p>
+      {(post.data.draft || (showProject && post.data.project)) && (
+        <p class="meta">
+          {post.data.draft && <strong>Draft</strong>}
+          {showProject && post.data.project && (
+            <>
+              {post.data.draft && ' · '}
+              <a href={url(`/projects/${post.data.project}/`)}>
+                {projectNames[post.data.project] ?? post.data.project}
+              </a>
+            </>
+          )}
+        </p>
+      )}
       <p>{post.data.summary}</p>
     </li>
   ))}

@@ -4,9 +4,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 import { url } from '../lib/url';
 
 export async function GET(context) {
-  // Undated posts are unpublished drafts. They surface locally in dev but
-  // must never reach the feed, where pubDate is required.
-  const posts = (await getPosts()).filter((post) => post.data.date);
+  const posts = await getPosts();
   return rss({
     title: SITE_TITLE,
     description: SITE_DESCRIPTION,
@@ -16,7 +14,8 @@ export async function GET(context) {
     items: posts.map((post) => ({
       title: post.data.title,
       description: post.data.summary,
-      pubDate: post.data.date,
+      // No pubDate: posts carry no date. It's optional in RSS 2.0; readers
+      // fall back to feed order, which is the order getPosts() returns.
       link: url(`/posts/${post.id}/`),
       categories: post.data.tags,
     })),

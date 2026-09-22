@@ -8,14 +8,9 @@ export type Project = CollectionEntry<'projects'>;
 // so a draft can never leak through a page that forgot to filter.
 const isVisible = (post: Post) => import.meta.env.DEV || !post.data.draft;
 
-// Undated posts are drafts in progress, so they sort to the top where
-// they're visible while writing. Everything dated follows, newest first.
-const newestFirst = (a: Post, b: Post) => {
-  if (!a.data.date && !b.data.date) return a.id.localeCompare(b.id);
-  if (!a.data.date) return -1;
-  if (!b.data.date) return 1;
-  return b.data.date.valueOf() - a.data.date.valueOf();
-};
+// Posts carry no date, so the NN- prefix on the filename is the order.
+// Reverse it for the index: most recently written reads first.
+const newestFirst = (a: Post, b: Post) => b.id.localeCompare(a.id);
 
 export async function getPosts(): Promise<Post[]> {
   const posts = await getCollection('blog', isVisible);
@@ -41,17 +36,9 @@ export const STATUS_LABEL: Record<Project['data']['status'], string> = {
   parked: 'Parked',
 };
 
-export function formatDate(date: Date): string {
-  return date.toLocaleDateString('en-US', {
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric',
-    timeZone: 'UTC',
-  });
-}
-
 // Compact form for the meta row, whose columns are far narrower than the
-// 1312px canvas the Figma hero assumes.
+// 1312px canvas the Figma hero assumes. Used for a project's startDate —
+// posts themselves carry no date.
 export function formatDateShort(date: Date): string {
   return date.toLocaleDateString('en-US', {
     year: 'numeric',
