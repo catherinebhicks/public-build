@@ -27,8 +27,8 @@ release on their own.
 | **Probe Quality** | Follow-up questions must be justified by meaningful evidence gaps. |
 | **Practice Improvement** | The candidate should measurably improve over retries and sessions. |
 
-A few of these deserve explaining, because they're not obvious and a couple
-of them are there to prevent a specific failure I've watched happen.
+5 of these deserve explaining, because they're not obvious and a couple of
+them are there to prevent a specific failure I've watched happen.
 
 **Grounding** is the load-bearing one. It means the agent cannot critique
 something the candidate didn't say. This sounds trivial and isn't. The
@@ -46,7 +46,7 @@ someone can hear.
 **Balanced Feedback** is lifted straight out of how I teach. Strength,
 critique, actionable improvement, encouraging close. That's the sequence I've
 used with students for years, and I was glad to find it earned its place here
-on the merits. A rubric written from scratch would have been a worse version
+on the merits! A rubric written from scratch would have been a worse version
 of something I already know works.
 
 **Probe Quality** governs follow-ups. The agent should push when there's a

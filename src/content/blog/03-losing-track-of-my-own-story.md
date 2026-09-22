@@ -12,9 +12,9 @@ draft: true
 I was testing the interview loop on myself. The question was "tell me about a
 project you're proud of," and I picked my eBay work, the first senior-level
 project I did, back when I was still a mid-level designer doing senior-level
-work. I know it inside out and upside down.
+work. I know it inside out and upside down!
 
-Four or five follow-ups in, I'd lost track of what I'd already told it.
+4 or 5 follow-ups in, I'd lost track of what I'd already told it.
 
 Not the project. The *telling* of it. I couldn't remember whether I'd
 mentioned the outcome, whether I'd explained why we moved to new patterns,
@@ -42,7 +42,7 @@ The reason it has to be a model and not a log is that interview answers
 develop out of order. Someone gives you the outcome four questions later.
 Context for question one shows up in the middle of question three. A system
 that treats each answer as isolated text can't notice that the gap it was
-about to probe was already filled.
+about to probe got filled three questions back.
 
 ## So why not just show it to them?
 

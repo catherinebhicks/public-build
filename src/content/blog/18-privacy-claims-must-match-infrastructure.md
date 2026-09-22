@@ -47,7 +47,7 @@ capability exists on an enterprise tier and you're on the free one.
 
 So all 6 vendors that touch user data got reviewed: what each receives, for
 what purpose, for how long. None came back as an automatic no. None came back
-as approved either. They came back **conditional**:
+as approved either. All 6 came back **conditional**:
 
 | Processor | Gets | Condition |
 |---|---|---|

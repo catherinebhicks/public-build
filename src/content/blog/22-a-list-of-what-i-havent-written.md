@@ -46,7 +46,7 @@ what it is.
 
 ## What the gaps turned out to be
 
-Grouping them, they fall into three kinds.
+Grouping them, they fall into 3 kinds.
 
 **Things I've been avoiding because they're hard.** Bias and fairness in
 evaluation. What happens when the coach gives bad feedback. How the coach
@@ -65,7 +65,7 @@ Writing the rigour first made the absence of the material obvious.
 
 ## The one I keep looking at
 
-The question bank. The source material is a workbook that lacks most of the
+The question bank. The source material is a workbook that lacks all 4 of the
 fields the agent needs: competencies, expected evidence, seniority modifiers,
 follow-up triggers. The risk register lists "question bank too
 thin to sustain a session" first, with the trigger being that a full session

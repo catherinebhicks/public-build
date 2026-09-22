@@ -19,7 +19,7 @@ Then the natural next question. Streaks?
 > Avoid that kind of gamification. I'm looking for a job, I'm stressed out.
 > I'm not thinking about that stuff.
 
-Done. No streaks, no points, no competitive framing.
+Done! No streaks, no points, no competitive framing.
 
 ## Engagement mechanics versus someone's actual state
 
@@ -37,8 +37,8 @@ They're anxious, possibly unemployed, and the stakes are real in a way a habit
 app's stakes never are.
 
 Adding a streak to that says: here's one more thing you're failing at. Miss
-three days during a week when you had four actual interviews and the product
-greets you with evidence of neglect.
+3 days during a week when you had 4 actual interviews and the product greets
+you with evidence of neglect.
 
 The line that ended up in the PRD:
 
@@ -70,8 +70,8 @@ I think this generalises past gamification. There's a category of feature that
 exists to serve the product's metrics while appearing to serve the user's
 goals, and it's often hard to spot because the feature is genuinely pleasant.
 
-The test that worked here: **imagine the user in their worst week.** Four
-interviews, two rejections, no practice time. What does this feature say to
+The test that worked here: **imagine the user in their worst week.** 4
+interviews, 2 rejections, no practice time. What does this feature say to
 them?
 
 Trends say: here's where you're strongest, when you're ready.

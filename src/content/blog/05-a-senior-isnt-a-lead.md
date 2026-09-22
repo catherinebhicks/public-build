@@ -73,7 +73,7 @@ The compressed version that went into the calibration:
 | **Mid-level** | "I'm making design decisions." |
 | **Senior** | "I'm exercising design judgment in complexity." |
 
-Three sentences, one rejected draft, and the better part of an afternoon.
+3 sentences, 1 rejected draft, and the better part of an afternoon.
 
 ## What the agent does with it
 
@@ -96,4 +96,6 @@ presents its own matrix as what all employers require would be confidently
 miscalibrating people against a standard nobody agreed to.
 
 It's my best synthesis from years of teaching. It's versioned, it's tunable,
-and it should be argued with.
+and it should be argued with. If you calibrate levels differently at your
+company, I'd want to hear it. That's the kind of disagreement that improves
+the rubric rather than the kind that wastes an afternoon.

@@ -21,8 +21,8 @@ in 3 different versions across the two documents. Not contradictory in
 any obvious way. Just written three times by someone who had the concept
 firmly in mind and didn't check the previous version before writing the next.
 
-It's now normative in one place, matched in the schema, and the 10
-dimensions are stated once and referenced everywhere else.
+It's now normative in 1 place, matched in the schema, and the 10 dimensions
+are stated once and referenced everywhere else.
 
 The technical spec is blunt about how this survived: every layer of the
 system is described separately and never demonstrated together. Nothing in
@@ -50,7 +50,7 @@ code adopts the ambiguous name, because once it's in a schema, it's in
 every query, every log line, and every conversation about the system forever.
 
 Catching it in a document is a footnote. Catching it after the table exists
-is a migration.
+is a migration ..
 
 ## What rule came out of it?
 

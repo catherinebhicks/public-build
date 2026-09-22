@@ -37,9 +37,9 @@ mock interview feel like a real conversation, it's the right call.
 What you give up is the ability to see inside. When audio goes in and audio
 comes out, there's no inspectable middle. If the interviewer asks a bad
 follow-up, you can't tell whether it misheard the answer, extracted the
-evidence wrong, or made a bad decision from correct evidence. Those are three
-different bugs with three different fixes, and the monolithic pipeline gives
-you one symptom for all of them.
+evidence wrong, or made a bad decision from correct evidence. Those are 3 different
+bugs with 3 different fixes, and the monolithic pipeline gives you one symptom
+for all of them.
 
 The modular version has a text transcript at every boundary. I can look at
 what it heard, what evidence it extracted, what it decided, and why. Each

@@ -14,7 +14,7 @@ capture, when I stopped on something that seemed small:
 > I don't want to be spoken over in a long pause. I may just be thinking, but
 > I need to have some level of timeout.
 
-It turned out not to be small. It selected a vendor.
+It turned out not to be small at all. It selected a vendor!
 
 ## Why is silence so hard to get right?
 
@@ -35,14 +35,14 @@ adapter like every other provider, so it's replaceable, but it was picked for
 this reason specifically.
 
 A product decision about respect chose an infrastructure component. That
-happens more than I expected.
+happens more than I expected ..
 
 ## The actual numbers
 
 - **6 to 8 seconds** of silence before any gentle check-in. Long enough
   to think; short enough not to feel abandoned.
 - **1 prompt**, not repeated nagging.
-- **90 seconds** and no answer started — move on.
+- **90 seconds** and no answer started: move on.
 - **2 minutes** if they're mid-answer and working through it.
 
 The distinction in those last two is the point. Someone who hasn't started is

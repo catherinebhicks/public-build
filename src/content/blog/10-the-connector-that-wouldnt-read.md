@@ -44,8 +44,8 @@ one that matters.
 
 Stop reading the whole document. Read the table cells directly.
 
-That worked immediately, and I'll admit to being pleased about it after an
-afternoon of the other thing. The failure was the *full document read*, not Google
+That worked immediately! I'll admit to being fairly pleased about that after
+an afternoon of the other thing. The failure was the *full document read*, not Google
 Docs and not the table. Narrowing the operation to just the cells I needed
 sidestepped whatever was choking on the whole file, and the empty table got
 found and populated safely.
@@ -67,3 +67,6 @@ I can't easily reconstruct, and "don't write into a state you can't read"
 is a rule worth holding rather than relearning.
 
 No feature shipped. Keeping it in anyway.
+
+If you're hitting the same thing with a document connector, holler. The fix
+took 2 minutes once I stopped asking the wrong question.

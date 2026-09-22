@@ -29,7 +29,7 @@ less realistic, and it's exhausting to sit through.
 
 ## When should it probe?
 
-Probe only when the missing evidence is:
+Probe only when the missing evidence hits all 4 of these:
 
 - **important** to the question,
 - **relevant** to the candidate's level,

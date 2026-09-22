@@ -17,7 +17,7 @@ And then, more specifically, an Indian English option, because in tech hiring
 that's frequently who you'll be talking to.
 
 The feature is straightforward: a small curated set of interviewer voices
-varying by gender presentation and English accent. 4 to start. A name, a
+varying by gender presentation and English accent. 4 to start! A name, a
 short tonal description, a play-sample button. Chosen during onboarding,
 changeable between sessions.
 
@@ -58,7 +58,7 @@ more processing, and that processing competes with the part of your brain
 assembling an answer about a project from three years ago.
 
 That's a rehearsable skill. Hearing a question in an unfamiliar accent for the
-10th time is easier than the first. The practice environment is exactly where
+10th time is easier than the 1st. The practice environment is exactly where
 that cost should be paid.
 
 The framing in the spec:

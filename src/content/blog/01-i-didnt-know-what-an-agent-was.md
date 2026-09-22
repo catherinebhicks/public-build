@@ -24,7 +24,7 @@ it needs them, and keeps track of context well enough to finish something
 over time. Structurally that's a planner, some memory, and connectors out to
 tools or APIs, wrapped in guardrails, behind an interface.
 
-What struck me is how unglamorous that is, and I liked it better for that.
+What struck me is how unglamorous that is, and I liked it better for that!
 4 parts, none of them exotic. What makes it an agent is *persistence*: the
 thing holds a goal across turns instead of answering one question and
 forgetting you existed.
@@ -64,3 +64,7 @@ something a nervous designer actually uses the night before an interview than
 something that demos well.
 
 So the log starts here, at not knowing what the word meant.
+
+If you've been
+nodding along in agent conversations without being able to define one either,
+holler. I'd genuinely like to know I'm not the only one.

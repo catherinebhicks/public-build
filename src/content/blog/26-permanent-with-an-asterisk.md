@@ -24,7 +24,7 @@ Catastrophic accidental deletion. Someone confirms a dialog they didn't read
 and destroys a year of practice history. Every system that has ever offered
 permanent deletion has fielded that email.
 
-Eight hours is a safety buffer for exactly that case. After it, the purge
+8 hours is a safety buffer for exactly that case. After it, the purge
 starts and there is no application-level recovery.
 
 ## So why isn't it an undo?

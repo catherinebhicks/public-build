@@ -21,11 +21,11 @@ Then I asked a question that wasn't about engineering at all:
 
 > What shows a typical AI workflow if I want to put this in my portfolio?
 
-That changed the answer.
+That changed the answer!
 
 ## Shipping fast, or showing the work
 
-If the goal is only to ship, the pragmatic architecture is code — one service,
+If the goal is only to ship, the pragmatic architecture is code: one service,
 conventional control flow, whatever's fastest to build and easiest to
 maintain.
 
@@ -109,3 +109,6 @@ Since they came from the same "modular so it can change" instinct:
 
 The common thread: assume every piece will be replaced, and put the seams in
 while it's cheap.
+
+If you've run a live agent loop through n8n and hit the latency wall, holler.
+I'd rather find out where it breaks from you than from my own users.

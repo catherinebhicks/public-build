@@ -37,15 +37,16 @@ product excludes those users.
 So typed answers went into V1 scope, with the ability to switch modality
 mid-session, because the commitment made it structural rather than optional.
 
-And having built it, it turns out to be for everyone: people on a train, in an
+And having built it, it turns out to be for everyone! people on a train, in an
 open-plan office, in a noisy room where transcription is going to be bad
 anyway. The usual curb-cut result. It was decided for disabled users and
 everyone gets it.
 
 ## So why isn't this polish?
 
-The reason this can't be retrofitted is that accessibility here isn't
-contrast ratios and alt text. It's interaction architecture:
+The reason this can't be retrofitted is that accessibility here goes well past
+contrast ratios and alt text. It's interaction architecture, and there are 8
+pieces of it:
 
 - **Timers** that announce themselves to screen readers without interrupting
   someone mid-answer
@@ -88,3 +89,7 @@ screen-reader passes**, and accessible PDF requirements for the exported
 summary. Lightweight, but explicit and blocking.
 
 A non-negotiable that nothing tests is an intention.
+
+If you've retrofitted AA onto a live interview or voice product, I'd really
+like to hear how it went. I'd rather learn the expensive parts from someone
+else's build than my own.

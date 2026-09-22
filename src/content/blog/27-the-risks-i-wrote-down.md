@@ -21,7 +21,7 @@ Some of them are uncomfortable to have written down.
 
 ## The question bank is too thin
 
-First on the list. The source workbook lacks most of the fields the agent
+First on the list. The source workbook lacks all 4 of the fields the agent
 needs: competencies, expected evidence, seniority modifiers, follow-up
 triggers.
 
@@ -94,8 +94,8 @@ one.
 
 ## What am I assuming?
 
-There's a shorter list of things currently taken as true and worth revisiting
-if any turns out false: that the workbook is usable as V1 content and its
+There's a shorter list of 6 things currently taken as true and worth
+revisiting if any turns out false: that the workbook is usable as V1 content and its
 provenance permits it, that the orchestration round trip is tolerable inside a
 live turn, that English-first is acceptable for V1, that typed input fully
 satisfies the accessibility requirement so voice can stay optional, and that

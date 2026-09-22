@@ -57,8 +57,8 @@ second.
 ## What that means for uploads
 
 Personalisation is progressive and entirely optional, and generic questions
-are always available. Nothing is required. Five inputs, and you can skip all
-of them.
+are always available. Nothing is required. 5 inputs, and you can skip all of
+them.
 
 - **Job description**: optional. Used to *weight* question selection, never
   to hard-filter it. Real interviews contain unexpected questions; a system

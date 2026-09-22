@@ -49,7 +49,7 @@ new account. Medium stays a place to cross-post by hand, pointing back here.
 Markdown files in a git repo, built to static HTML.
 
 There's nothing to log into. Publishing is a commit and a push, and about
-30 seconds later it's live. The posts are versioned, diffable, and mine in a
+30 seconds later it's live! The posts are versioned, diffable, and mine in a
 format that will still open in twenty years. Every decision I revise leaves a
 trail in the history instead of silently overwriting what I thought before,
 which matters for a log whose whole premise is keeping the wrong turns in.
@@ -75,3 +75,6 @@ migration decide when I get to start writing, I'm publishing here now and will
 move it, with redirects, once the migration lands. Every internal link is
 root-relative specifically so that move is a config change instead of a
 rebuild.
+
+If you're setting up something similar and want the config, holler and I'll
+send it over. It's about 40 lines and most of that is the sitemap.

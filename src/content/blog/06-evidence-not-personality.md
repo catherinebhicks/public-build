@@ -64,7 +64,7 @@ This is the part that stops the rubric turning hostile.
 A rigid version produces absurd feedback. A recruiter asking why you're
 interested in the company does not require the same evidence as a hiring
 manager asking about a major product decision. Demanding trade-off analysis
-in a two-minute screener answer would be a bug, not rigour.
+in a 2-minute screener answer would be a bug, not rigour.
 
 So evidence is evaluated relative to **question × interview type ×
 seniority**, and a dimension can be critical, secondary, missing-but-not-

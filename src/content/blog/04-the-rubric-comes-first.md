@@ -9,7 +9,7 @@ draft: true
 ---
 
 There's an obvious way to build an interview feedback tool, and it takes
-about an hour. You take the candidate's answer, you hand it to a model, and
+about an hour to throw together. You take the candidate's answer, you hand it to a model, and
 you ask: how was that?
 
 You will get feedback. It will be fluent, it will be plausible, and you will
@@ -47,7 +47,7 @@ It also front-loads the hard thinking. Writing the rubric means committing to
 what a good answer to a UX interview question actually contains, at junior
 versus senior, for behavioural versus hiring-manager questions. That's a
 teaching problem rather than an engineering one, and it's the part of this
-project where my actual expertise lives, which is the part I'm enjoying most.
+project where my actual expertise lives. It's the part I'm enjoying most!
 I suspect it's also where most of the project's value will end up.
 
 The model is the easy part. Everybody has the same models. What's mine is the
