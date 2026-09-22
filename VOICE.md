@@ -184,62 +184,81 @@ structure constantly.
 - **Typos and inconsistent capitalisation survive to final PDF.** Not a thing
   to imitate, but a reminder that a spotless surface is not her surface.
 
-## Part three: unedited email (added 2026-09-22)
+## Part three: two registers, not one (added 2026-09-22)
 
-The studio pitches are written prose, edited for a client. Sent email is
-written once and never revised, so the habits show more clearly. ~440 words
-read from late 2024 across client, scheduling and administrative threads.
+~1,500 words of sent email sampled from late 2024 to mid 2025, sorted by
+recipient. Rates per 1,000 words.
 
-| Per 1,000 words | Her email | Her PDFs | The drafts (now) |
-|---|---|---|---|
-| Em dashes | **0.0** | **0.0** | 0.25 |
-| Digits | **16.0** | 10.8 | 3.6 |
-| Exclamation marks | 6.8 | 0.8 | 0.0 |
+| | Professional email | Personal email | Studio pitches | **Cold outreach** | Drafts (now) |
+|---|---|---|---|---|---|
+| Words sampled | 826 | 714 | 3,602 | 173 | 15,725 |
+| Em dashes | **0.0** | **0.0** | **0.0** | **11.6** | 0.25 |
+| Digits | 6.1 | 9.8 | 10.8 | 17.3 | 3.6 |
+| Exclamation marks | **9.7** | 5.6 | 0.8 | 0.0 | 0.0 |
+| Questions punctuated as statements | 0 | **5** | 0 | 0 | 0 |
 
-**Zero em dashes across 4,041 words of her writing, in two registers.** Where
-a dash would go she uses a spaced hyphen — *"didn't address the menu at
-smaller breakpoints - might want to have whoever is working on your website
-get in and address that"* — or starts a new line.
+### Her job-application email is not hers
 
-**The dotted trail-off is her most distinctive habit.** *"No problem ... this
-is a fantastic v2."* *"I'll get in there and fix it for you real quick.. but
-if she designed that beautiful new site…"* Two dots or three, spaced or not,
-where most writers would use a comma or a full stop. No model produces this.
+Cold outreach runs **11.6 em dashes per 1,000 words** against zero everywhere
+else she writes. It also carries *game-changer*, *seasoned design leader*,
+*well-equipped to contribute*, *I hope this message finds you well*.
 
-**She leads with the hedge, then the claim.** Sentences open *"Looks like…"*,
-*"My guess is…"*, *"it seems to…"*. Generated prose states the conclusion at
-full confidence and supports it after.
+One was sent with `---TWO OPTIONS---` still at the top and `---OR---` between
+two complete drafts of the same message.
 
-**Her verbs are idiomatic.** Hop in, holler, get in there, take another once
-over, pop back in, real quick. Generated copy reaches for *address, ensure,
-leverage, facilitate*.
+**Exclude job applications and cold outreach from the baseline.** The em-dash
+rate is a sufficient test on its own: above ~1 per 1,000 words, she didn't
+write it. (The AI-drafted blog copy measured 10.2.)
 
-**Terminal punctuation is optional.** Messages end with no full stop. One
-question ends in a period: *"How would you like me to proceed."*
+### Professional register
 
-### The subject-dropping rule needs a caveat
+- **Opens "Hey [Name]" on its own line, no comma.** Including "hey Joe"
+  lowercase. Never "Dear".
+- **Warmest of the three registers** — exclamation marks ~10x the rate of her
+  written case studies. *"Hope all is well in your neck of the woods!"*
+  *"This role looks great! Go forth! :)"* Emoticons appear.
+- **Offers help before being asked, with a named action.** *"holler at me if
+  she runs up against any issues and I'll get in there and fix it for you real
+  quick."*
+- **Hedges before concluding.** *"Looks like…" "My guess is…"* Observation
+  first, claim second.
+- **Bad news plainly, then straight to logistics.** *"I dont think Im going to
+  be able to make it - had something come up with my VISTA site."* No apology
+  paragraph.
 
-Pattern 8 in the rules doc treats dropped subjects as a machine tell. That
-holds only for the clipped résumé register (*"Co-lead on design — flows and
-UI patterns"*). Her email drops subjects constantly and reads entirely human:
-*"Had a conflict come up." "Glad to hop in." "Might want to have whoever is
-working on your website get in and address that."*
+### Personal register
 
-The difference is register, not grammar. Hers is speech, with a contraction
-and a casual verb. Don't restore a subject just because one is missing.
+- **Blunt when wronged, opening on the judgement.** *"This is ridiculous."*
+  *"What an absolute bummer for this to happen and not be notified."* The
+  professional register never does this.
+- **Questions punctuated as statements** — the sharpest marker between the
+  two. 5 instances in 714 words, 0 in professional email. *"How would you like
+  me to proceed."* *"Did you not get my previous email."*
+- **More numbers than the professional voice**, not fewer. Under pressure she
+  reaches for the count.
+- **Self-deprecating about her own mistakes, briefly.** *"I have completely
+  blanked on my volunteer portal login."*
+- **Parenthetical dark humour.** *"(SSI intake - let the madness begin)..."*
+- **Typos run highest here** and are never corrected.
 
-### What this changes for the drafts
+### Which register the build log wants
 
-Three things the 2026-09-22 edit pass did not do, now that the email sample
-exists:
+**Professional, at the studio pitches' length.** Take the "Hey [Name]"
+directness, the unprompted offers of help, the exclamation marks, the
+hedge-before-claim order, the numerals.
 
-1. **Digits are still 4x too low** (3.6 vs her 16.0 in email). Every "several"
-   and "a lot" that has a real number behind it should carry the numeral.
-2. **No exclamation marks anywhere in 15,725 words.** Hers run at 6.8 per
-   1,000 in email, 0.8 in written prose. Even at the written-prose rate the
-   drafts should have a dozen. Currently zero.
-3. **No dotted trail-offs.** A handful, used where a sentence genuinely tails
-   off, would do more for authenticity than any other single edit.
+From the personal register take **only the bluntness**, and only about
+something that genuinely annoyed her. *"What an absolute bummer"* belongs in a
+build log; *"This is ridiculous"* does not. The question-as-statement tic is
+personal-only — it reads as impatience.
+
+### Still outstanding on the drafts
+
+1. **Digits 3.6, should be ~6** (professional-register rate).
+2. **Zero exclamation marks in 15,725 words.** Professional register runs 9.7
+   per 1,000. Even a tenth of that is ~15.
+3. **No "Hey"-style direct address and no dotted trail-offs.**
+4. **No unprompted offer of help** anywhere in the 27 posts.
 
 ## How to work the list
 
