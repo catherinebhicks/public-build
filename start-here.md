@@ -14,9 +14,10 @@ First project documented: the **UX Interview Coach Agent** — an agentic
 interview-practice product for UX/product designers. "A coach, not an answer
 bank."
 
-**Status (2026-09-21):** site is live and deployed. 19 posts written, all
-still drafts and all undated — a backlog, not a schedule. Nothing has
-published yet.
+**Status (2026-09-22):** site is live and deployed. 39 post files, all
+still drafts and none dated — a backlog, not a schedule. Nothing has
+published yet. 27 are written; 12 are placeholders waiting on open spec
+sections.
 
 ## Where Things Live
 
@@ -44,25 +45,25 @@ DNS for `catherinehicks.com` is at **GoDaddy**. Needed only at cutover.
 frontmatter, MDX, RSS, sitemap, `projects` as a first-class dimension,
 WCAG 2.2 AA groundwork (skip link, landmarks, focus states, AA contrast in
 both themes), GitHub Pages deploy, Figma-derived design system (Space Grotesk
-+ Inter, self-hosted), 19 drafts written and numbered.
++ Inter, self-hosted), 27 drafts written and numbered, 12 placeholders
+stubbed.
 
 **In progress:** Catherine editing the drafts. They are in Claude's voice,
 not hers — editing is the gate.
 
 **Next:** publish posts one at a time as each is edited. **No cadence is
-committed to** — the original Mon/Wed/Fri pre-dating was removed on
-2026-09-21 because it assumed the posts would publish in written order.
-A post gets its date at the moment it publishes.
+committed to.** Posts carry no date at all — the `date` field was removed
+from the schema on 2026-09-21. Order comes from the `NN-` filename prefix,
+which is the order they were written.
 
 ## Immediate Next Steps
 
 1. **Edit and publish post 01** (`01-i-didnt-know-what-an-agent-was.md`) —
-   edit it, add `date: YYYY-MM-DD`, change `draft: true` to `draft: false`,
-   commit, push. The date is required to publish; the build refuses without
-   it.
-2. **Rewrite post 09** before it publishes (#12). It claims the
-   example-answer contradiction was caught and fixed. It is still live in
-   PRD §8 and §32, and her own Drive comments flag it as blocking.
+   edit it, change `draft: true` to `draft: false`, commit, push. That is
+   the whole publish step; there is no date to add.
+2. **Post 09 is unblocked** (#12 can close). It claimed the example-answer
+   contradiction was caught and fixed; as of the 21 September revision that
+   is now true — PRD §8, §26, §32 and §41 all agree. Verified 2026-09-22.
 3. **Work the 39 review comments** on the three Drive docs (#13) — PRD 20,
    Technical Spec 17, Decision Rationale 2, all unresolved. Several are
    strong material for build-phase posts.
@@ -111,20 +112,21 @@ draft: true
 ---
 ```
 
-**No `date:` while it's a draft.** Add one only when publishing:
-
-```yaml
-date: 2026-09-23
-draft: false
-```
+**There is no `date` field.** Publishing is one change: `draft: false`.
 
 `npm run dev` → http://localhost:4321/public-build/ (drafts visible locally
 only, and they sort to the top since they're the work in progress).
 
-Frontmatter is schema-checked. `date` is optional, but a zod `.refine` in
-`src/content.config.ts` **requires** it once `draft: false` — so a post can
-never publish undated. The build fails with a message naming the file.
-Undated posts are also excluded from RSS, where `pubDate` is required.
+Frontmatter is schema-checked in `src/content.config.ts`; a malformed post
+fails the build with a message naming the file. Posts have no date, so the
+index sorts on the `NN-` prefix and the RSS feed carries no `pubDate` —
+readers fall back to feed order.
+
+**Placeholder posts** (`28`–`39`) are tagged `placeholder` and open with a
+blockquote saying so. Each names the spec sections it's waiting on and the
+questions it would have to answer. They exist so the content has somewhere
+to land — fill one in when its source section is decided, and drop the
+blockquote and the `placeholder` tag at that point.
 
 ## Where Tasks Are Tracked
 
