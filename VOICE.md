@@ -114,12 +114,86 @@ open with "There's a…".
 **Fix:** read aloud. Let one post be much shorter, one much longer, and let
 at least one skip the costs section entirely.
 
-## A caveat on this audit
+## Part two: measured against her actual writing
 
-This is measured against the rules in the "How AI Writes" doc, which was
-itself distilled from a copy audit of the healthcare portfolio against her
-2024 case-study PDFs. **I did not find those original PDFs**, so nothing
-here is calibrated against a fresh sample of her actual writing — only
-against the distilled rules. A sample-based pass would catch positive voice
-traits (the things she does that a model wouldn't) that a rules-based pass
-structurally cannot.
+Voice baseline located 2026-09-22 — the two 2024 studio-pitch PDFs, her only
+substantial non-AI prose in Drive. Both are now linked from the "How AI
+Writes" doc itself.
+
+- [NetBase Pro (2024)](https://drive.google.com/file/d/1xWcHjyZ9hdPoLf3V4xh_ImGeQH4UYl77/view)
+- [Kelly Moore (2024)](https://drive.google.com/file/d/1wu7pZZnDcK27D_50Y4Xh4015foVQZyVv/view)
+
+3,602 words of her prose against 15,813 words of blog:
+
+| Measure (per 1,000 words) | Her writing | The drafts |
+|---|---|---|
+| Em dashes | **0.0** | 10.2 |
+| Numbers and figures | **10.8** | 0.4 |
+| "we" | 9.7 | 1.6 |
+| Exclamation marks | 0.8 | 0.0 |
+| Warmth words (privilege, love, excited, proud…) | 29 instances | 2 |
+| Questions used as headings | several | **0** |
+
+Part one said cut em dashes to ~4 per 1,000. Her own number is **zero across
+3,602 words.** She does not use them. The comma, the period and the humble
+hyphen do all that work. Target 1–2 per 1,000, not 4.
+
+### The three things her writing does that the drafts don't
+
+**1. It counts things.** Her case studies are dense with figures: *1,000s of
+data filters reduced to 500, then 150, then 175. Timeline: 14 months.
+Interviewed 30 people. Bi-weekly phone calls, 1:1 feedback sessions, monthly
+virtual user testing, 3 multi-day site visits. About a week and a half to get
+a concept to the client.* She narrates process by counting it.
+
+The drafts are 25× less numerate. They argue about principles where she would
+report quantities. **This is the biggest gap and the most fixable** — the
+material exists: 66 PRD sections, 86 spec sections, 38 TBDs, 10 evidence
+dimensions, a probe cap of 2 configurable 1–4, 39 review comments, an
+eight-hour quarantine.
+
+**2. It sounds glad to have done the work.** *"I had the privilege of being
+the first internal design hire." "I had the incredible opportunity." "Being
+the first UX hire at iTradeNetwork was both exciting and challenging." "I love
+turning complex business objectives into engaging designs."*
+
+Across 15,813 words the drafts contain two warmth words. The register is
+uniformly wry, measured, faintly self-critical. That's a voice — it just
+isn't hers. The identical finding came out of the healthcare copy audit:
+2,019 text blocks, one line with any warmth in it.
+
+**3. It asks questions out loud.** *"How do we build a platform that is easy
+to use so more users can use it?" "Is Coke better than Pepsi?" "What is the
+data? Who is saying it? What are they saying?" "How do I pick colors that go
+well together?"*
+
+Zero of the 103 headings in the drafts is a question. She uses questions as
+structure constantly.
+
+### Also true of her prose, and worth not sanding off
+
+- **Loose, run-on sentences**, with comma splices and the occasional missing
+  period. The drafts are uniformly tight and balanced, and that polish is
+  itself a tell.
+- **"We" for the team, "I" for her own work.** Six times more "we" than the
+  drafts. Less applicable to a solo build log, but the collaborators — the
+  engineers, the data scientists, the team from Taiwan — are named in her
+  writing and absent from the drafts.
+- **Real quotes from real people.** The drafts quote the spec and her own
+  earlier sentences. Her case studies quote users verbatim.
+- **Typos and inconsistent capitalisation survive to final PDF.** Not a thing
+  to imitate, but a reminder that a spotless surface is not her surface.
+
+## How to work the list
+
+Per post, in order, roughly fifteen minutes each:
+
+1. Search `—`. Convert nearly all of them.
+2. Search `isn't`, `aren't`, `wasn't`, `not just`. Keep at most two across the
+   whole set.
+3. Read the last line of each section aloud. If it's a maxim, cut it and end
+   on the fact before it.
+4. Add a number. Anywhere the post says "several" or "a lot" or "most", say
+   how many.
+5. Turn at least one heading into a question.
+6. Find one place to say you enjoyed something, if you did.
