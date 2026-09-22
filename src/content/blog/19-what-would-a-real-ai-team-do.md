@@ -53,9 +53,13 @@ because a few examples look good.
   real examples exist. A blocking regression can't be waived ad hoc; it's
   fixed, or reclassified through a documented rubric change.
 
-## Two qualities that block a release
+## The qualities that block a release
 
-Most evaluation dimensions are quality bars. Two are gates.
+Most evaluation dimensions are quality bars. Some are gates: a known failure
+there stops the release, and a high aggregate score doesn't buy it a pass.
+
+I started with two. It's now six, which was not the direction I expected the
+list to move.
 
 **Grounding.** The coach must not invent candidate evidence. A coach giving
 mediocre wording advice is annoying. A coach confidently praising or
@@ -69,8 +73,35 @@ what was missing and what to do next. The product exists for improvement
 through practice; feedback that sounds intelligent and changes nothing fails
 the entire value proposition.
 
-Everything else can be a bit worse and the product still works. These two
-can't.
+**Impact and usefulness.** Correct, exhaustive, and useless is a real failure
+mode. A feedback report that lists every minor observation buries the two or
+three changes that would actually improve the next attempt. Being right isn't
+the bar; being usable is.
+
+**Directness with respect.** The coach names weak evidence plainly without
+being demeaning, and pairs the critique with somewhere to go. This is a gate
+rather than a quality bar because both ways of failing it are severe: critique
+so softened it hides the problem, or valid critique delivered in a way that
+makes someone stop practising.
+
+**Probe quality.** Follow-ups have to target an important, recoverable gap.
+Probing to consume the cap, repeating the question in different words, or
+asking for evidence already given — those aren't small annoyances. They're the
+agent visibly not listening, in a product whose whole premise is that it
+listens.
+
+**Practice improvement.** Coaching that reads well and changes nothing on the
+retry is the failure that matters most, and the one you can only see across
+attempts rather than in a single response.
+
+Balanced feedback — the strength → critique → strength structure — is the one
+I kept as a quality bar rather than a gate, because the failure mode of
+enforcing it is manufactured praise, which is worse than a missing compliment.
+
+The reason the list grew is that every one of these, left as a soft bar, has a
+version where the product technically works and is useless to the person
+using it. That's the specific way this kind of tool fails, so that's where the
+gates go.
 
 ## The real test, which I can't measure yet
 

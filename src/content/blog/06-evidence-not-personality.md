@@ -46,9 +46,16 @@ Ten of them, extracted per answer:
 | Outcomes | What happened as a result? |
 | Reflection | What did they learn or understand afterward? |
 
-Each gets a status — observed, partial, missing, or not applicable — plus the
-transcript snippet it came from. That last part is what makes feedback
-defensible. The system can show you the words that produced the assessment.
+Each gets a **status** — observed, partial, missing, or not applicable — and,
+separately, a **strength** — low, medium, or high. Those answer two different
+questions: is the evidence there at all, and how good is it? Collapsing them
+into one score was tempting and would have been wrong, because "you didn't
+mention the outcome" and "the outcome you mentioned was thin" call for
+completely different coaching.
+
+Both travel with the transcript snippet they came from. That last part is what
+makes feedback defensible. The system can show you the words that produced the
+assessment.
 
 ## Not every answer needs every dimension
 
