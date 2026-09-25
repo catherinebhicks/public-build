@@ -81,6 +81,16 @@ authoritative.
 Same pattern with focus: before starting, it shows what it plans to focus on,
 and you can edit it directly. The edited version wins.
 
+## Using context is not the same as saving it
+
+A later pass on the human–agent responsibility model exposed another distinction I had been collapsing: **the system can use information the candidate supplied without automatically turning it into durable memory.**
+
+A resume can be useful for this session and still remain session-only. A fact the candidate explicitly states can become versioned saved context with provenance. A system inference stays identifiable as an inference and must be reviewable when it materially affects personalization.
+
+And there is a separate category for things the candidate deliberately wants to keep: **“remember this”** and **“practice this.”** The AI may suggest one of those. It may organize and resurface things the candidate saved. It cannot silently convert its own judgment into a user-designated takeaway.
+
+That gives persistence an ownership rule rather than a blanket confirmation rule: using context, saving durable context, and choosing a personal takeaway are three different actions.
+
 ## Consent as history
 
 One structural decision that follows. Consent is an **append-only event
