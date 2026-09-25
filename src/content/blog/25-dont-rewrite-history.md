@@ -45,20 +45,19 @@ later, which is a specific constraint on the extraction step: don't just store
 the score, store enough of what produced it that a future version can reach a
 different conclusion from the same material.
 
-## Corrections go forward, not backward
+## Corrections create a new truth without erasing the old record
 
 This is the part that took the longest to get right.
 
-If you correct something during a session, the coach misheard you or the
-resume extraction got your role wrong, that correction is durable and should
-absolutely affect your future sessions. It gets promoted into a new version of
-your saved context, with a record of where it came from.
+If the coach misheard you, the transcript is wrong, or resume extraction got your role wrong, that is a **source correction**, not a disagreement about the coach's opinion. Once the candidate corrects or confirms the source, the corrected version becomes the basis for subsequent feedback and re-evaluation.
 
-What it does *not* do is reach back and edit the historical reports or the
-session context they ran against. Each session references the context version
-it actually used.
+But the old evaluation still does not get silently rewritten. The system creates a new traceable evaluation/report version from the corrected source and preserves the earlier version as the historical record of what the system produced from the information it had at the time.
 
-The rule in the spec: never back-write historical reports or session context.
+Durable factual corrections can also be promoted into a new version of saved context, with provenance. Historical sessions continue to identify the context version they actually used.
+
+That is different from saying, “I don't agree with your assessment.” An interpretation dispute does not make the candidate's preferred assessment authoritative. The system has to show the evidence and rubric behind its conclusion, allow the underlying facts to be corrected if they are wrong, and preserve the disagreement without manufacturing a different judgment.
+
+So the rule became more precise: **never silently back-write history; re-evaluate corrected evidence as a new version.**
 
 ## What happens if the past can change
 
