@@ -1,9 +1,9 @@
 ---
 title: Why did you ask me that?
 summary: >-
-  The agent already has to record why it chose every question and every
-  probe. What the user gets to see of that is undecided — and it may be the
-  most legible proof that this is an agent rather than a script.
+  The agent already records why it chose every question and probe. Internal
+  traceability is settled; the user-facing explanation is still a product
+  decision, especially in Mock.
 project: ux-interview-coach
 tags: [placeholder, agents, transparency]
 draft: true
@@ -15,9 +15,9 @@ draft: true
 
 ## The angle
 
-The agent already has to record why it chose every question and every probe.
-What the user gets to see of that is undecided — and it may be the most
-legible proof that this is an agent rather than a script.
+The agent now has a settled internal trace: material selections, deviations, probes, coaching decisions, and move-on decisions are recorded as Agent Decision Events with reasons and relevant state.
+
+What the user gets to see of that is still undecided — and it may be the most legible proof that this is an agent rather than a script.
 
 ## Waiting on
 
@@ -25,9 +25,7 @@ legible proof that this is an agent rather than a script.
 
 ## What the source sections say so far
 
-§42 and Tech §64 already require the agent to explain selection *internally*,
-and Agent Decision Events already log the decision, the reason, and the
-inputs.
+The current architecture requires material Agent Decision Events to record the decision, reason, and relevant inputs/state. That internal explainability is no longer the open part.
 
 What's undecided is the user-facing half: whether a candidate can ask why a
 question was chosen, what they're shown, and whether it appears during the
