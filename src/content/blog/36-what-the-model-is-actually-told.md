@@ -1,8 +1,8 @@
 ---
 title: What the model is actually told
 summary: >-
-  Output schemas are specified in detail. The prompts that produce those
-  outputs don't exist yet.
+  The exact prompts are still an implementation artifact, but the contract
+  around them is no longer open: prompts are versioned product configuration.
 project: ux-interview-coach
 tags: [placeholder, prompts, architecture]
 draft: true
@@ -14,23 +14,20 @@ draft: true
 
 ## The angle
 
-Output schemas are specified in detail. The prompts that produce those outputs
-don't exist yet.
+The exact prompt text and few-shot examples are still implementation work. But the architecture around them is no longer TBD: interviewer, evidence extraction, probe/coach, synthesis, and integrity prompts are versioned product configuration rather than ad hoc strings.
 
 ## Waiting on
 
-- Tech §66 — Prompt library and prompt versioning (TBD)
+- Tech §66 — Prompt library, versioning, and reproducibility (normative contract settled; exact prompt content still implementation work)
 
 ## What the source sections say so far
 
 Covers the actual prompt text: interviewer persona, evidence extraction, the
 probe/coach decision, synthesis, and safety.
 
-§41 defines the structured output schemas; nothing yet defines what the model
-is told in order to fill them.
+The structured output schemas define what each model role must return. The normative versioning contract now defines how the prompt/configuration behind that output is identified and preserved, even though the exact wording is still to be authored and evaluated.
 
-Also covers few-shot examples of good and bad probes, and how prompt_version
-is stored and referenced by Feedback and Evidence Items.
+Every material evaluation or decision records the provider/model and role, prompt version, schema version, rubric/calibration version, question version or canonical ID, application/workflow configuration, relevant saved-context version, and source turn/attempt IDs. Historical outputs are immutable; a later run becomes a new versioned reinterpretation.
 
 ## Questions this post would have to answer
 
