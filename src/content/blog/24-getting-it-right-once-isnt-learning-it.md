@@ -45,6 +45,14 @@ competency is the only version that tells you anything.
 It's also the version that's uncomfortable, because you can't prepare for it,
 which is the same reason real interviews work that way.
 
+## A third thing: what the candidate chooses to keep
+
+The responsibility work added another layer that isn't the same as either priority above. A candidate can explicitly say **“practice this”** or **“remember this.”** That is user-curated context.
+
+The AI can recommend that something may be worth practising or remembering, but it cannot silently promote its own judgment into a candidate-designated takeaway. A system-created competency priority means “the evidence suggests this needs work.” A user-curated practice item means “I want to come back to this.” Those can overlap, but they are not interchangeable.
+
+That distinction matters because a learning system shouldn't quietly turn every diagnosis it makes into the user's personal to-do list.
+
 ## Not a remediation queue
 
 Priorities persist into future session planning, and they can either be woven
