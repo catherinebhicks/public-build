@@ -39,16 +39,23 @@ ask question → extract evidence → enough evidence? → yes, move on / no,
 generate follow-up. Each step inspectable, each run traceable. You can
 screenshot it and explain it.
 
-So: **n8n-heavy orchestration, with a thin coded application layer.**
+So that was the decision at this point in the build: **n8n-heavy orchestration, with a thin coded application layer.**
+
+It didn't survive contact with the live-loop requirements.
+
+## What changed later
+
+Once I worked through checkpointing, voice recovery, cross-device takeover, model fallback, and the latency budget turn by turn, the seam moved. The live interview loop now belongs to the Next.js/application backend: question retrieval, evidence extraction, Story State, probe/coach/move-on decisions, persistence, and STT/TTS coordination all stay on the latency-sensitive path.
+
+n8n still matters, but **only asynchronously**: report synthesis, story/context processing, question-bank enrichment, exports, evaluation runs, notifications, and maintenance. The browser still never calls it directly, and Supabase remains the durable source of truth.
+
+I kept the original reasoning here because this is exactly the kind of architecture decision I wanted the project to expose. The portfolio goal pushed me toward visible orchestration. The operational requirements then forced me to decide which visibility was worth keeping and which work had to move into code.
 
 ## The seam
 
 The thin layer is what keeps this from being a trap.
 
-It handles the real-time UX, authentication, security boundaries, and session
-state. n8n orchestrates the AI work. The separation means the product doesn't
-become inseparable from n8n, and latency-sensitive or high-scale pieces can
-move into code later without a rewrite.
+At this stage I described the coded layer as handling the real-time UX, authentication, security boundaries, and session state, while n8n orchestrated the AI work. That was the seam I expected to preserve. The later live-loop work above narrowed n8n's role further: asynchronous orchestration stays there; latency-sensitive interview decisions do not.
 
 I asked directly what I'd be giving up if I wanted to productise this later.
 The answer was: not much, if the seam is designed now. Which is the only
@@ -65,11 +72,7 @@ Two supporting rules fell out:
   durable storage. Workflow execution history is not a system of record.
   Supabase owns durable state.
 
-Also: n8n orchestrates **discrete, inspectable modules** rather than
-containing one giant prompt. Question selection, evidence extraction,
-follow-up decision, coaching, synthesis, 5 modules with defined inputs and
-outputs. That's what makes the canvas legible instead of being a flowchart
-with one enormous box in the middle.
+The modularity principle survived even though the runtime boundary changed. Question selection, evidence extraction, decision policy, coaching, and synthesis still have defined inputs and outputs; they simply do not all execute in n8n. The architecture stays inspectable without making the visual workflow tool responsible for the live interview.
 
 ## A non-engineering reason, named
 
