@@ -53,8 +53,7 @@ practice, not pressure.
 I pushed back, because I wasn't sure one was enough to actually surface
 anything useful, and I didn't want to find out by rebuilding.
 
-So it's **configurable: default 2, testable from 1 to 4**, set per
-session, with every probe logged so we can see what actually helps.
+V1 now uses a **default ceiling of 2 probes**. A range of 1 to 4 stays available as an internal testing and calibration control, not a candidate-facing per-session setting. Every probe is logged so we can see what actually helps.
 
 The part that matters more than the number: **the agent must never consume the
 available probes simply because they exist.** The cap is a ceiling, not a
@@ -62,7 +61,7 @@ target. If the evidence is there after 0 follow-ups, it moves on. A system
 that always asks exactly 2 follow-ups has replaced judgment with a quota,
 which is the failure mode the whole design is trying to avoid.
 
-Mock mode stays realism-first even when the configured cap is higher.
+Mock mode stays realism-first regardless of the internal test ceiling.
 
 ## Stop probing when someone is stuck
 
@@ -88,7 +87,7 @@ gap and raises it at the end.
 Deliberately tiny. It answers one question: *what should the interviewer do
 next, and why?*
 
-- **decision**: probe or move on
+- **decision**: move on, probe, coach, or end the question
 - **justification**: a short note tied to the evidence model
 - **probe counter**: guard against exceeding the cap
 
